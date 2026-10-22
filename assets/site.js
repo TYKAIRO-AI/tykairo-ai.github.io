@@ -12,5 +12,5 @@
     check.src=src;
   });
   const brand=document.querySelector('.brand');
-  if(brand){const check=new Image();check.onload=()=>{check.className='brand-image';check.alt='';brand.prepend(check)};check.src='/assets/user/brand-logo.webp'}
+  if(brand){const check=new Image();check.onload=()=>{check.className='brand-image';check.alt='TYKAIRO-AI logo';brand.prepend(check)};check.src='/assets/brand-logo-owned.svg'}
 })();
