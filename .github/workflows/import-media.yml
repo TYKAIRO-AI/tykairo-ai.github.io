@@ -1,0 +1,70 @@
+name: Import owned WordPress media
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/import-media.yml'
+permissions:
+  contents: write
+jobs:
+  import-owned-media:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and validate owned WordPress images
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          from urllib.error import URLError, HTTPError
+          sources = {
+            "brand-logo.png": "chatgpt-image-6-oct-2026-14_30_00-1.png",
+            "brand-hero.png": "chatgpt-image-6-oct-2026-14_30_08-2.png",
+            "sia-legacy.png": "sia-project-visual.png",
+            "agentshield-icon.png": "agentshield-project-logo.png",
+            "small-model-booster-icon.png": "small-model-booster-original.png",
+            "ai-cost-optimizer-icon.png": "ai-cost-optimizer-original.png",
+            "viral-shorts-factory-icon.png": "viral-shorts-factory-v2-original-icon.png",
+            "one-product-30-ads-icon.png": "one-product-30-ads-original-icon.png",
+            "ai-influencer-studio-icon.png": "ai-influencer-studio-3d.png"
+          }
+          folder=Path('assets/user');folder.mkdir(parents=True,exist_ok=True)
+          for dest,source in sources.items():
+            urls=[
+              'https://tykairoai.files.wordpress.com/2026/10/'+source,
+              'https://tykairoai.wordpress.com/wp-content/uploads/2026/10/'+source
+            ]
+            ok=False
+            for url in urls:
+              try:
+                req=Request(url,headers={'User-Agent':'TYKAIRO-AI-Media-Migration/1.0'})
+                with urlopen(req,timeout=20) as response:
+                  mime=response.headers.get('Content-Type','')
+                  data=response.read(9_000_001)
+                png=data.startswith(b'\x89PNG\r\n\x1a\n')
+                jpeg=data.startswith(b'\xff\xd8\xff')
+                webp=data.startswith(b'RIFF') and data[8:12]==b'WEBP'
+                if not (png or jpeg or webp) or len(data)>9_000_000 or len(data)<1000:
+                  raise ValueError('Not a valid image')
+                if source.endswith('.png') and not png:
+                  raise ValueError('Expected PNG image')
+                (folder/dest).write_bytes(data)
+                print('OK',dest,len(data),'bytes')
+                ok=True
+                break
+              except Exception as exc:
+                print('Unavailable',url,type(exc).__name__,str(exc)[:100])
+            if not ok:print('FAILED',dest)
+          PY
+      - name: Commit retrieved media only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/user/
+          if ! git diff --cached --quiet; then
+            git commit -m "Import owned product images from archived WordPress media URLs"
+            git push
+          else
+            echo "No new public WordPress media could be downloaded."
+          fi
