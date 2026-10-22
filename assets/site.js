@@ -14,3 +14,5 @@
   const brand=document.querySelector('.brand');
   if(brand){const check=new Image();check.onload=()=>{check.className='brand-image';check.alt='TYKAIRO-AI logo';brand.prepend(check)};check.src='/assets/brand-logo-owned.svg'}
 })();
+/* Consistent original brand hero across all public site pages */
+(()=>{document.querySelectorAll('.hero:not(.visual-hero)').forEach(hero=>{hero.classList.add('visual-hero');const artwork=document.createElement('div');artwork.className='hero-art';artwork.setAttribute('aria-hidden','true');artwork.innerHTML='<div class="hero-orbit"></div><div class="hero-orbit"></div><img src="/assets/brand-logo-owned.svg" alt="">';hero.prepend(artwork)})})();
