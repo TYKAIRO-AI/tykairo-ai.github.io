@@ -46,3 +46,13 @@ body{background:radial-gradient(ellipse at 80% -10%,#1c214a55,transparent 45%),#
 @media(max-width:650px){.top .nav{gap:4px}.brand{font-size:16px}.hero{min-height:590px}.hero-art{opacity:.18;inset:10% 0 auto 25%;width:80%;height:380px}.hero .wrap{padding:95px 0}.service-strip{grid-template-columns:repeat(2,1fr)}.card .media{height:250px}.promo-card .media{height:300px}}
 @media(prefers-reduced-motion:reduce){.hero-art:before{animation:none}}
 body.ar .hero:after{background:linear-gradient(270deg,#070b13 2%,#070b13e8 48%,#070b1370 85%,#070b1340),linear-gradient(0deg,#070b13,transparent 28%)}
+
+/* Shared navigation, concept-link visibility and responsive improvements */
+.menu{gap:clamp(9px,1.35vw,20px)}.menu a{white-space:nowrap}.nav{gap:clamp(8px,1.2vw,18px)}.navbtn{white-space:nowrap}
+.design-preview-link{display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(640px,100%);margin-top:26px;padding:15px 20px;border-radius:12px;border:1px solid #fc595d6b;background:linear-gradient(95deg,#3d151da8,#131724be);box-shadow:0 12px 34px #0006;flex-wrap:wrap;transition:transform .25s,border-color .25s}
+.design-preview-link:hover{transform:translateY(-3px);border-color:#ff777c}
+.design-preview-link span{color:#ff868d;font:800 10px 'Space Grotesk';letter-spacing:.1em}
+.design-preview-link strong{font:800 12px 'Space Grotesk';letter-spacing:.045em}
+@media(max-width:1150px){.menu{font-size:12px;gap:10px}.navbtn{display:none}}
+@media(max-width:900px){.nav{flex-wrap:wrap;gap:10px;padding:12px 0}.menu{order:3;width:100%;overflow-x:auto;justify-content:flex-start;padding:6px 0 8px;margin:0}.menu a{padding:8px 0}}
+@media(prefers-reduced-motion:reduce){.design-preview-link{transition:none}}
