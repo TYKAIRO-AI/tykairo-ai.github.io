@@ -16,3 +16,9 @@
 })();
 /* Consistent original brand hero across all public site pages */
 (()=>{document.querySelectorAll('.hero:not(.visual-hero)').forEach(hero=>{hero.classList.add('visual-hero');const artwork=document.createElement('div');artwork.className='hero-art';artwork.setAttribute('aria-hidden','true');artwork.innerHTML='<div class="hero-orbit"></div><div class="hero-orbit"></div><img src="/assets/brand-logo-owned.svg" alt="">';hero.prepend(artwork)})})();
+
+/* TYKAIRO navigation: shared pages and interactive concept gallery */
+(()=>{const menu=document.querySelector('.menu');if(menu){const add=(href,label,after)=>{if(menu.querySelector('a[href="'+href+'"]'))return;const a=document.createElement('a');a.href=href;a.textContent=label;const anchor=menu.querySelector('a[href="'+after+'"]');if(anchor)menu.insertBefore(a,anchor);else menu.append(a)};add('/work-flow-n8n/','n8n Workflows','/technology/');add('/design-lab/','3D Design Lab','/contact/');const path=location.pathname;menu.querySelectorAll('a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')===path));}
+const home=document.querySelector('main .hero .wrap');if(location.pathname==='/'&&home&&!document.querySelector('.design-preview-link')){const bar=document.createElement('a');bar.className='design-preview-link';bar.href='/design-lab/';bar.innerHTML='<span>NEW: INTERACTIVE 3D DESIGN LAB</span><strong>EXPLORE 3 FULL WEBSITE CONCEPTS ↗</strong>';home.append(bar)}
+const lang=document.getElementById('lang');if(lang&&!document.querySelector('[data-en]')){lang.title='Full Arabic translation coming soon';lang.setAttribute('aria-label','Language preview (translation not available yet)');lang.addEventListener('click',()=>{document.documentElement.lang='en';document.body.classList.remove('ar');lang.textContent='العربية'},true)}
+})();
