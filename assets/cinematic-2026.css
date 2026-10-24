@@ -60,3 +60,20 @@ html.brand-cover-ready .page-hero:not(.story-hero):after,html.brand-cover-ready 
 html:not(.brand-red-ready) .hero-emblem,html:not(.brand-red-ready) .story-logo{mix-blend-mode:screen}
 @media(max-width:790px){.hub-hero .hero-inner{padding-top:clamp(230px,55vh,450px);min-height:760px}.hub-hero .hero-sky{background-position:center 24%}.hub-hero .hero-copy{padding:22px}.hub-hero .hero-bottomline{display:none}}
 @media(max-width:520px){.hub-hero .hero-inner{padding-top:270px;min-height:770px}.hub-hero .hero-copy{padding:20px 16px;background:#080507d9}.hub-hero .hero-copy h1{font-size:clamp(41px,11vw,58px)}.hub-hero .lede{font-size:14px}.hub-hero .hero-status{font-size:8px}.page-hero:not(.story-hero):after{background-position:center,center,61% center}}
+
+
+/* Navigation refresh — primary contact CTA replaces the Design Lab button. */
+.topbar .top-contact-cta{display:inline-flex;align-items:center;gap:9px;padding:10px 14px;background:linear-gradient(125deg,#c91430,#f82e46);border:1px solid #ff4560;color:#fff;box-shadow:0 4px 23px #be173d38;font-weight:800}
+.topbar .top-contact-cta:hover{background:linear-gradient(125deg,#e6193c,#ff4059);border-color:#ff8293;box-shadow:0 7px 30px #ed214842}
+.topbar .top-contact-cta[aria-current="page"]{border-color:#fff1f1}
+.topbar .top-contact-symbol{flex-shrink:0;display:block}
+@media(min-width:1191px){.topbar .navlinks .nav-contact-item{display:none}}
+@media(max-width:1190px){.topbar .nav-actions .top-contact-cta{display:none}}
+@media(max-width:940px){.topbar .nav-actions .top-contact-cta{display:inline-flex;min-width:38px;padding:9px 10px}}
+@media(max-width:650px){.topbar .top-contact-cta .top-contact-label{display:none}.topbar .nav-actions .top-contact-cta{min-width:38px;justify-content:center;width:38px;height:38px}.topbar .top-contact-symbol{width:19px;height:19px}}
+@media(max-width:400px){.topbar .nav{gap:5px}.topbar .nav-actions{gap:5px}.topbar .nav-actions .top-contact-cta{width:34px;min-width:34px;height:35px;padding:7px}}
+/* Source-accurate, self-hosted brand marks. */
+.contact-channel-icon--linkedin{background:#fff!important;border-color:#fff!important}
+.contact-channel-icon--github{background:#19191e!important;border-color:#5f5f68!important}
+.contact-channel-icon--gmail{background:#fff!important;border-color:#fff!important}
+.contact-channel-icon img{display:block;width:27px;height:27px;object-fit:contain}
