@@ -1,0 +1,57 @@
+/* TYKAIRO-AI product catalog v1 — dark cinematic design */
+.catalog-page-hero{min-height:570px;padding-top:178px!important;padding-bottom:87px!important}
+.catalog-page-hero h1{max-width:890px}.catalog-page-hero p{max-width:740px;color:#e7d9df}
+.catalog-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.catalog-intro-banner{background:linear-gradient(135deg,#14070d,#09070a 72%);border-top:1px solid #4b1e2b;border-bottom:1px solid #4b1e2b;padding:65px 0}
+.catalog-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.catalog-intro-grid h2{font-size:clamp(42px,5.2vw,76px)}.catalog-intro-grid p{max-width:600px;font-size:16px}
+.catalog-banner-visual{min-height:290px;position:relative;overflow:hidden;border-radius:18px;border:1px solid #502233;background:radial-gradient(ellipse at 50% 55%,#9a203044,transparent 65%),#110c11;display:grid;place-items:center}
+.catalog-banner-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.catalog-brand-sigil{position:relative;font:800 clamp(36px,4vw,68px) 'Space Grotesk',sans-serif;letter-spacing:-.07em;text-shadow:0 0 40px #fc354777}.catalog-brand-sigil span{color:#ff3354}
+.catalog-section{padding-top:84px!important}.catalog-toolbar{display:flex;flex-direction:column;gap:20px;margin-bottom:34px}
+.catalog-toolbar-title h2{font-size:clamp(36px,4vw,64px)}.catalog-toolbar-title p{margin:8px 0}
+.catalog-controls{display:flex;align-items:center;justify-content:space-between;gap:22px}
+.catalog-tabs{display:flex;gap:9px;flex-wrap:wrap}.catalog-tab{border:1px solid #5b2936;color:#dcc1c9;background:#170f15;border-radius:7px;font-weight:700;cursor:pointer;padding:12px 15px;font-size:12px;transition:background .2s,border-color .2s}.catalog-tab:hover,.catalog-tab:focus-visible{border-color:#f74e65;color:#fff}.catalog-tab.is-active{background:#e81c3c;color:#fff;border-color:#ff4055;box-shadow:0 0 20px #f728423d}
+.catalog-search{position:relative;display:flex;align-items:center;min-width:270px;max-width:360px;flex:1}.catalog-search input{color:white;width:100%;background:#140e13;border:1px solid #6a3446;border-radius:8px;padding:12px 14px 12px 42px;font:500 13px 'DM Sans';outline:none}.catalog-search input:focus{border-color:#ff4055;box-shadow:0 0 0 3px #ff38521f}.catalog-search input::placeholder{color:#a88b96}.catalog-search-icon{position:absolute;left:15px;color:#ff7181;pointer-events:none;font-size:24px;line-height:1}
+.catalog-results{color:#f0b2bd;font-size:12px;font-weight:700}.catalog-empty{color:#e9d2d6;text-align:center;padding:40px 0}
+.catalog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.catalog-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;background:linear-gradient(155deg,#1c1017,#0b0a0d 72%);border:1px solid #4c2632;border-radius:15px;transition:border-color .25s,transform .25s,box-shadow .25s}
+.catalog-card:hover,.catalog-card:focus-within{transform:translateY(-5px);border-color:#fa4157;box-shadow:0 23px 65px #b319302a}
+.catalog-card-media{display:block;position:relative;aspect-ratio:16/9;background:#100a10}
+.catalog-card-arrow{position:absolute;right:17px;top:17px;background:#0e0b0dc9;border:1px solid #ab3d50;border-radius:50%;height:36px;width:36px;display:grid;place-items:center;font-size:19px;color:#ffdbe1;z-index:3}
+.catalog-photo-frame{position:relative;display:block;width:100%;height:100%;min-height:160px;background:linear-gradient(125deg,#300c17,#0a0a0f 55%,#180610);overflow:hidden}
+.catalog-photo-frame:before{content:'';position:absolute;inset:-50%;pointer-events:none;background:repeating-linear-gradient(45deg,transparent 0px,transparent 37px,#ff244c13 38px,#ff244c13 39px);transform:rotate(-7deg)}
+.catalog-photo-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:11px;padding:26px}
+.catalog-photo-placeholder small{color:#ff6679;font:700 9px 'Space Grotesk';letter-spacing:.3em}
+.catalog-photo-placeholder strong{color:#fff;font:800 clamp(16px,2vw,27px) 'Space Grotesk';line-height:1.15;text-shadow:0 0 25px #ef345a55}
+.catalog-photo-placeholder em{font:700 9px 'Space Grotesk';font-style:normal;letter-spacing:.2em;color:#a9798b}
+.catalog-photo-frame>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:2;transition:transform .35s}.catalog-card:hover .catalog-photo-frame img{transform:scale(1.04)}.catalog-photo-frame>img[hidden]{display:none}
+.catalog-card-copy{padding:22px 23px 23px;display:flex;flex-direction:column;flex:1}
+.catalog-card-meta{display:flex;justify-content:space-between;align-items:center;gap:9px;margin-bottom:12px}
+.catalog-card-type,.catalog-card-state{color:#f39aaa;font:800 10px 'Space Grotesk';letter-spacing:.07em;text-transform:uppercase}
+.catalog-card-state{border:1px solid #813446;padding:4px 8px;border-radius:30px;color:#f2ccd3}
+.catalog-card-copy h3{font-size:24px;margin:0 0 11px;letter-spacing:-.035em}.catalog-card-copy h3 a:hover{color:#ff6576}.catalog-card-copy p{font-size:13px;line-height:1.9;margin:0 0 22px;flex:1;color:#bfb2ba}
+.catalog-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:9px;flex-wrap:wrap;border-top:1px solid #4c2c38;padding-top:15px}
+.catalog-card-bottom>span{font:600 10px 'DM Sans';color:#ac929d}.catalog-card-bottom>a{font:800 11px 'Space Grotesk';color:#ff6e80;letter-spacing:.03em}
+.catalog-home-showcase{background:#0b090d!important;border-top:1px solid #4b2935}.catalog-home-showcase .catalog-grid{margin-bottom:18px}
+.catalog-research{border-top:1px solid #382029;background:#080709!important}.catalog-research .section-header .eyebrow:after{content:' · SELECTED RESEARCH';font-size:10px}
+.catalog-detail-hero{padding:172px 0 92px!important;min-height:610px;overflow:hidden}
+.catalog-detail-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.92fr);gap:48px;align-items:center}
+.catalog-back{display:inline-block;font:800 11px 'Space Grotesk';color:#f8a9ba;letter-spacing:.11em;margin-bottom:29px}.catalog-back:hover{color:white}
+.catalog-detail-hero h1{font-size:clamp(46px,6vw,91px);letter-spacing:-.07em;overflow-wrap:anywhere;margin:15px 0 20px}
+.catalog-detail-hero p{font-size:clamp(16px,1.4vw,19px);color:#e1d1d7;line-height:1.8;max-width:620px}
+.catalog-detail-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.catalog-detail-art{width:100%;aspect-ratio:16/10;border-radius:17px;border:1px solid #813345;box-shadow:0 24px 75px #0009;overflow:hidden;background:#100c12}
+.catalog-detail-art .catalog-photo-frame{height:100%}.catalog-detail-art img{object-fit:contain;background:#070508}.catalog-detail-art .catalog-photo-frame{background:linear-gradient(125deg,#401020,#09070b)}
+.catalog-detail-overview{display:grid;grid-template-columns:1fr 1fr;gap:10%;align-items:start}.catalog-detail-overview h2{font-size:clamp(38px,5vw,71px)}.catalog-detail-overview p{font-size:17px;line-height:1.9}
+.catalog-detail-features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:50px}.catalog-feature{border:1px solid #613142;border-radius:11px;padding:27px;background:#170e15}.catalog-feature-index{font:800 11px 'Space Grotesk';letter-spacing:.17em;color:#f85974}.catalog-feature h3{font-size:20px;margin:29px 0 13px}.catalog-feature p{margin:0;font-size:13px;line-height:1.8}
+.catalog-gallery-section{background:#0b080d!important;border-top:1px solid #45212e}.catalog-detail-gallery-header{max-width:760px;margin-bottom:35px}.catalog-detail-gallery-header p{font-size:14px;line-height:1.85}
+.catalog-detail-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
+.catalog-gallery-shot{margin:0;border:1px solid #673245;border-radius:14px;padding:10px;background:#130e13;overflow:hidden}
+.catalog-gallery-shot .catalog-photo-frame{height:auto;aspect-ratio:16/9;border-radius:8px}.catalog-gallery-shot img{object-fit:contain;background:#090709}
+.catalog-gallery-shot figcaption{font:700 11px 'DM Sans';color:#c8a7b3;padding:14px 8px 7px}
+.catalog-detail-cta{padding:75px 0;background:linear-gradient(130deg,#200916,#0a080c);border-top:1px solid #69253a}
+.catalog-detail-cta>.container{display:flex;align-items:center;justify-content:space-between;gap:24px}.catalog-detail-cta h2{font-size:clamp(37px,5vw,68px)}.catalog-detail-cta p{max-width:640px}
+html[dir=rtl] .catalog-search input{padding:12px 42px 12px 14px}html[dir=rtl] .catalog-search-icon{left:auto;right:15px}html[dir=rtl] .catalog-card-arrow{right:auto;left:17px}
+@media(max-width:1100px){.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.catalog-controls{flex-direction:column;align-items:stretch}.catalog-search{max-width:none}}
+@media(max-width:770px){.catalog-intro-grid,.catalog-detail-head,.catalog-detail-overview{grid-template-columns:1fr}.catalog-detail-art{max-width:580px}.catalog-detail-features{grid-template-columns:1fr 1fr}.catalog-intro-banner{padding:50px 0}.catalog-detail-cta>.container{display:block}.catalog-detail-cta .button{margin-top:20px}}
+@media(max-width:650px){.catalog-grid,.catalog-detail-gallery,.catalog-detail-features{grid-template-columns:1fr}.catalog-page-hero{padding:155px 0 67px!important;min-height:460px}.catalog-page-hero h1{font-size:clamp(51px,12vw,79px)}.catalog-hero-actions .button{flex:1}.catalog-detail-hero{padding:149px 0 65px!important}.catalog-card-media{aspect-ratio:16/9}.catalog-tabs{gap:6px}.catalog-tab{padding:10px 12px;font-size:11px}.catalog-photo-placeholder strong{font-size:23px}.catalog-detail-features{margin-top:28px}.catalog-detail-hero h1{font-size:clamp(47px,11vw,75px)}}
