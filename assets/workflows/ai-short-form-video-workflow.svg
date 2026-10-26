@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">TYKAIRO-AI — AI Short-Form Video Workflow</title>
+<desc id="desc">Illustrative overview of the n8n automation: Webhook input, OpenAI script and publishing copy, content audit, Creatomate video render, and final video or job status. This is a conceptual process diagram, not a screenshot of the editor.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#190a13"/><stop offset=".55" stop-color="#0a0a10"/><stop offset="1" stop-color="#180b12"/></linearGradient>
+  <linearGradient id="hot" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff6a82"/><stop offset=".6" stop-color="#ff3156"/><stop offset="1" stop-color="#a81336"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#25141f"/><stop offset="1" stop-color="#101017"/></linearGradient>
+  <radialGradient id="aura"><stop stop-color="#e21b4350"/><stop offset="1" stop-color="#ed124100"/></radialGradient>
+  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="shadow" x="-30%" y="-30%" width="170%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000000" flood-opacity=".65"/></filter>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7f283b" opacity=".17" stroke-width="1"/></pattern>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10" fill="none" stroke="#ff5671" stroke-width="2"/></marker>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+<ellipse cx="1120" cy="280" rx="500" ry="420" fill="url(#aura)"/><circle cx="850" cy="550" r="300" fill="#a8153720" filter="url(#glow)"/>
+<path d="M0 0H1600" stroke="#ea2948" stroke-width="8"/>
+<g font-family="Arial,Helvetica,sans-serif">
+ <g transform="translate(72 67)">
+  <rect width="58" height="58" rx="14" fill="#f23255"/><path d="M12 39L29 12L46 39H36L29 27L23 39Z" fill="#fff"/>
+  <text x="77" y="36" font-size="35" font-weight="800" fill="#fff" letter-spacing="-1">TYKAIRO<tspan fill="#ff526c">-AI</tspan></text>
+ </g>
+ <rect x="1240" y="76" width="282" height="43" rx="21" stroke="#ff617a" fill="#4c182b"/>
+ <circle cx="1266" cy="97.5" r="6" fill="#ff7388"/><text x="1281" y="104" font-size="17" letter-spacing="1.2" font-weight="700" fill="#ffdfe6">N8N · APPROVED</text>
+ <text x="74" y="218" fill="#fff" font-size="67" font-weight="800" letter-spacing="-1">AI SHORT-FORM</text>
+ <text x="74" y="298" fill="#ff5e7c" font-size="72" font-weight="800" letter-spacing="-1">VIDEO AUTOMATION</text>
+ <text x="77" y="340" fill="#cbb4c0" font-size="22">Webhook-driven script creation, review &amp; 9:16 rendering with OpenAI and Creatomate</text>
+ <g filter="url(#shadow)">
+  <g transform="translate(73 424)">
+    <rect width="236" height="264" rx="22" fill="url(#panel)" stroke="#a7415a" stroke-width="2"/>
+    <rect x="20" y="20" width="58" height="55" rx="13" fill="#6e1c34"/><path d="M35 43H62M48 30V58" stroke="#ff829a" stroke-width="5" stroke-linecap="round"/>
+    <text x="21" y="108" fill="#ff8a9e" font-size="16" font-weight="700">STEP 01</text><text x="21" y="145" fill="#fff" font-size="28" font-weight="800">WEBHOOK</text>
+    <text x="21" y="178" fill="#d2bbc7" font-size="17">Receive an authorized</text><text x="21" y="203" fill="#d2bbc7" font-size="17">POST request</text>
+    <text x="21" y="239" fill="#ffadb8" font-size="14">DRAFT / AUDIT / RENDER</text>
+  </g>
+  <g transform="translate(347 424)">
+    <rect width="236" height="264" rx="22" fill="url(#panel)" stroke="#a7415a" stroke-width="2"/>
+    <rect x="20" y="20" width="58" height="55" rx="13" fill="#0a655b"/><text x="48" y="59" text-anchor="middle" font-size="34" fill="#90f6dd">✦</text>
+    <text x="21" y="108" fill="#6cf4cf" font-size="16" font-weight="700">STEP 02</text><text x="21" y="145" fill="#fff" font-size="28" font-weight="800">OPENAI</text>
+    <text x="21" y="178" fill="#d2bbc7" font-size="17">Generate short scripts</text><text x="21" y="203" fill="#d2bbc7" font-size="17">and publishing copy</text>
+    <text x="21" y="239" fill="#90f6dd" font-size="14">HOOKS / CAPTIONS</text>
+  </g>
+  <g transform="translate(621 424)">
+    <rect width="236" height="264" rx="22" fill="url(#panel)" stroke="#a7415a" stroke-width="2"/>
+    <rect x="20" y="20" width="58" height="55" rx="13" fill="#65401a"/><path d="M33 46l10 10 21-24" stroke="#ffc86d" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="21" y="108" fill="#ffc86d" font-size="16" font-weight="700">STEP 03</text><text x="21" y="145" fill="#fff" font-size="28" font-weight="800">AUDIT</text>
+    <text x="21" y="178" fill="#d2bbc7" font-size="17">Validate copy and</text><text x="21" y="203" fill="#d2bbc7" font-size="17">video duration</text>
+    <text x="21" y="239" fill="#ffc86d" font-size="14">REVIEW / CHECKLIST</text>
+  </g>
+  <g transform="translate(895 424)">
+    <rect width="236" height="264" rx="22" fill="url(#panel)" stroke="#a7415a" stroke-width="2"/>
+    <rect x="20" y="20" width="58" height="55" rx="13" fill="#382574"/><path d="M37 30l25 17-25 17z" stroke="#b8a0ff" stroke-width="4" fill="none" stroke-linejoin="round"/>
+    <text x="21" y="108" fill="#c6aaff" font-size="16" font-weight="700">STEP 04</text><text x="21" y="145" fill="#fff" font-size="27" font-weight="800">CREATOMATE</text>
+    <text x="21" y="178" fill="#d2bbc7" font-size="17">Render a vertical</text><text x="21" y="203" fill="#d2bbc7" font-size="17">9:16 video clip</text>
+    <text x="21" y="239" fill="#c6aaff" font-size="14">RENDER JOB / STATUS</text>
+  </g>
+  <g transform="translate(1169 424)">
+    <rect width="354" height="264" rx="22" fill="url(#panel)" stroke="#d64b66" stroke-width="2"/>
+    <rect x="20" y="20" width="58" height="55" rx="13" fill="#831c34"/>
+    <rect x="33" y="30" width="29" height="32" rx="5" fill="none" stroke="#ff9aaf" stroke-width="3"/><path d="M43 40l11 6-11 6z" fill="#ff9aaf"/>
+    <text x="92" y="41" fill="#ff8aa0" font-size="16" font-weight="700">STEP 05</text>
+    <text x="92" y="72" fill="#fff" font-size="24" font-weight="800">VIDEO / STATUS</text>
+    <rect x="24" y="93" width="105" height="154" rx="13" fill="#07070b" stroke="#9b334e" stroke-width="2"/>
+    <rect x="32" y="101" width="89" height="138" rx="9" fill="#61152f"/><path d="M32 206L65 155L81 170L120 118V239H32Z" fill="#b22b51" opacity=".75"/>
+    <circle cx="75" cy="160" r="24" stroke="#ffbbca" fill="#150916aa" stroke-width="2"/><path d="M68 146L90 160L68 174Z" fill="#fff"/>
+    <text x="147" y="134" fill="#e4ccd7" font-size="17">Final video URL</text><text x="147" y="164" fill="#e4ccd7" font-size="17">Creative kit</text>
+    <text x="147" y="194" fill="#e4ccd7" font-size="17">Render job ID</text><text x="147" y="224" fill="#ff93ab" font-size="18" font-weight="800">VERTICAL 9:16</text>
+  </g>
+ </g>
+ <g stroke="#ff5774" stroke-width="5" marker-end="url(#arrow)" fill="none"><path d="M312 556H343"/><path d="M586 556H617"/><path d="M860 556H891"/><path d="M1135 556H1165"/></g>
+ <path d="M72 741H1523" stroke="#5c2839" stroke-width="2"/>
+ <text x="76" y="796" font-size="22" fill="#f4d5df" font-weight="700">OFFICIALLY APPROVED N8N TEMPLATE</text>
+ <text x="76" y="831" font-size="18" fill="#bd9eaa">Diagram illustrates the automation stages; it is not an editor screenshot.</text>
+ <text x="1520" y="795" font-size="22" text-anchor="end" fill="#ff829b" font-weight="800">WORKFLOW #21716</text>
+ <text x="1520" y="831" font-size="18" text-anchor="end" fill="#d5afbc">n8n.io/workflows/21716</text>
+</g>
+</svg>
