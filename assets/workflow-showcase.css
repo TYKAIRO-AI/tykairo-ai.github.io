@@ -58,3 +58,23 @@
 html[dir=rtl] .wf-official-art{border-left:0;border-right:1px solid #492837}
 @media(max-width:950px){.wf-official{grid-template-columns:1fr}.wf-official-art{border-left:0;border-top:1px solid #492837}.wf-art-diagram{min-height:240px}.wf-official h3{font-size:clamp(30px,6vw,46px)}}
 @media(max-width:550px){.wf-official-art{padding:20px}.wf-art-diagram{gap:14px}.wf-art-mobile{flex-basis:112px}.wf-art-flow span{font-size:9px;padding:9px 8px}.wf-official-links .button{width:100%;text-align:center}.wf-official-flags{margin-bottom:20px}}
+
+/* Standalone gallery of officially approved n8n workflows */
+.wf-published-section{background:#0b090e!important;border-block:1px solid #532032}
+.wf-published-section .section-header strong{color:#ff5371}
+.wf-published-card{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(290px,.78fr);overflow:hidden;align-items:stretch;border:1px solid #713346;border-radius:18px;background:linear-gradient(145deg,#23101b,#0d0c11);box-shadow:0 20px 65px #0008}
+.wf-published-image{display:block;min-height:300px;background:#10080e;overflow:hidden}
+.wf-published-image img{width:100%;height:100%;display:block;object-fit:contain;transition:transform .35s}
+.wf-published-image:hover img{transform:scale(1.017)}
+.wf-published-body{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:15px;padding:clamp(22px,3vw,43px);border-left:1px solid #612c3d}
+.wf-published-badge{background:#582237;border:1px solid #c3425e;color:#ffe3eb;font:800 11px 'Space Grotesk',sans-serif;letter-spacing:.04em;padding:9px 13px;border-radius:20px}
+.wf-published-date{font:700 11px 'Space Grotesk',sans-serif;color:#af8796}
+.wf-published-body h3{font:800 clamp(24px,2.5vw,37px)/1.12 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.04em;margin:0}
+.wf-published-body p{font-size:14px;line-height:1.85;color:#dac5d0;margin:0}
+.wf-published-tags{display:flex;flex-wrap:wrap;gap:8px}
+.wf-published-tags span{padding:7px 11px;border:1px solid #633041;border-radius:7px;background:#26151f;color:#ffd9e2;font:700 11px 'Space Grotesk',sans-serif}
+.wf-published-body small{font-size:11px;line-height:1.5;color:#a898a0}
+.wf-published-count{font-size:13px;color:#a998a1;margin:20px 0 0}
+html[dir=rtl] .wf-published-body{border-left:0;border-right:1px solid #612c3d}
+@media(max-width:900px){.wf-published-card{grid-template-columns:1fr}.wf-published-body{border-left:0;border-top:1px solid #612c3d}html[dir=rtl] .wf-published-body{border-right:0}}
+@media(max-width:600px){.wf-published-image{min-height:180px}.wf-published-body .button{width:100%;text-align:center}}
