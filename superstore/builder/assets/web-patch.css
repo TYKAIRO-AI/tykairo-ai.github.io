@@ -1,6 +1,0 @@
-/* Small web-only adjustments; preserve the original design */
-.online-trial-note{background:#284d38;color:#fff;padding:9px 16px;text-align:center;font-size:12px;font-weight:500;line-height:1.6}
-.sidebar-bottom .local-dot{font-size:10px}
-#export-button{white-space:nowrap}
-a.primary{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:#fff}
-@media(max-width:800px){.online-trial-note{font-size:10px}.top-actions{gap:4px}#export-button{font-size:11px;padding:7px 9px}}
