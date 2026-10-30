@@ -5,3 +5,6 @@
  {kind:'hero',url:'/assets/user/tykairo-home-hero.webp',className:'brand-hero-ready'},
  {kind:'cover',url:'/assets/user/tykairo-inner-bg.webp',className:'brand-cover-ready'}
 ];for(const a of assetList){const probe=new Image();probe.decoding='async';probe.onload=()=>{root.classList.add(a.className);if(a.doReplace)document.querySelectorAll('[data-brand-logo]').forEach(img=>{img.src=a.url;img.alt='TYKAIRO-AI red metallic logo';})};probe.onerror=()=>{};probe.src=a.url;}})();
+
+/* Optional GA4 analytics, activated only after visitor consent. */
+(()=>{const el=document.createElement('script');el.src='/assets/ga4-consent.js?v=20261030';el.defer=true;document.head.appendChild(el);})();
