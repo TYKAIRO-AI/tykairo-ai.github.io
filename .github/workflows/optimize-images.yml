@@ -1,0 +1,57 @@
+name: Optimize website artwork
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/optimize_site_images.py
+      - .github/workflows/optimize-images.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tykairo-image-optimization
+  cancel-in-progress: false
+
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Pillow
+        run: python -m pip install "Pillow>=11,<13"
+      - name: Compress images and build catalog thumbnails
+        run: python scripts/optimize_site_images.py
+      - name: Check generated HTML references
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          from urllib.parse import unquote
+          for page in (Path('index.html'),Path('projects/index.html')):
+              html = page.read_text(encoding='utf8')
+              for src in re.findall(r'<img\b[^>]*\bsrc="([^"]+)"', html):
+                  if src.startswith('/') and not (src.startswith('//')) and not Path(unquote(src[1:]).split('?')[0]).is_file():
+                      raise SystemExit(f'Missing image referenced in {page}: {src}')
+          print('Catalog image paths checked successfully')
+          PY
+      - name: Commit compressed artwork
+        shell: bash
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/ index.html projects/
+            git commit -m "Compress WebP artwork and serve lightweight catalog thumbnails"
+            git push
+          else
+            echo "Already optimized"
+          fi
