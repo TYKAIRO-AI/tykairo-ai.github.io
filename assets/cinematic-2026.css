@@ -37,9 +37,9 @@ body {background-color:#050406!important}
 .topbar .brand img,.footer .brand img,.hero-emblem,.story-logo{filter:grayscale(1) sepia(1) saturate(5) hue-rotate(315deg) contrast(1.2) drop-shadow(0 0 13px #ff263c88)}
 html.brand-red-ready .topbar .brand img,html.brand-red-ready .footer .brand img,html.brand-red-ready .hero-emblem,html.brand-red-ready .story-logo{filter:drop-shadow(0 0 15px #ff344677)}
 .hub-hero{min-height:100svh;padding:125px 0 72px;background:#050406}
-.hub-hero .hero-sky{opacity:1;filter:grayscale(1) sepia(1) saturate(4) hue-rotate(315deg) brightness(.72);background-image:url('/assets/user/brand-hero.webp');background-position:center 38%;background-size:cover}
+.hub-hero .hero-sky{opacity:1;filter:none;background-image:url('/assets/user/tykairo-home-hero.webp');background-position:center center;background-size:cover}
 html.brand-hero-ready .hub-hero .hero-sky{background-image:var(--new-hero);filter:none;opacity:1;background-position:center center;background-size:cover}
-.hub-hero .hero-shade{background:linear-gradient(0deg,#060507 0%,#060507cf 10%,#05040514 47%,#09050985 100%),linear-gradient(90deg,#0303049c,#0000 55%)}
+.hub-hero .hero-shade{background:linear-gradient(0deg,#040304fb 0%,#070407e8 11%,#0804073d 42%,#0503061a 68%,#0503069a 100%)}
 html.brand-hero-ready .hub-hero .hero-shade{background:linear-gradient(0deg,#040304fb 0%,#070407e8 11%,#0804073d 42%,#0503061a 68%,#0503069a 100%)}
 .hub-hero .hero-inner{display:flex;align-items:flex-end;min-height:min(920px,calc(100svh - 120px));padding-top:clamp(180px,32vh,385px);position:relative}
 .hub-hero .hero-visual{display:none}
@@ -50,7 +50,7 @@ html.brand-hero-ready .hub-hero .hero-shade{background:linear-gradient(0deg,#040
 .hub-hero .hero-status{margin-top:12px}
 .page-hero,.story-hero{background:#080507!important;position:relative;isolation:isolate}
 .page-hero:before{display:none}
-.page-hero:not(.story-hero):after,.story-hero:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#030305ef 0%,#080407cb 42%,#07040972 100%),linear-gradient(0deg,#050305 0%,transparent 47%),url('/assets/user/brand-hero.webp') center/cover;filter:grayscale(1) sepia(1) saturate(4) hue-rotate(315deg) brightness(.65);pointer-events:none}
+.page-hero:not(.story-hero):after,.story-hero:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#030305ef 0%,#080407cb 42%,#07040972 100%),linear-gradient(0deg,#050305 0%,transparent 47%),url('/assets/user/tykairo-inner-bg.webp') center/cover;filter:none;pointer-events:none}
 html.brand-cover-ready .page-hero:not(.story-hero):after,html.brand-cover-ready .story-hero:after{background:linear-gradient(90deg,#050406de,#050406ab 44%,#05040624),linear-gradient(0deg,#060406,transparent 53%),var(--new-cover) center/cover;filter:none}
 .story-hero .story-backdrop{display:none}
 .page-hero .container,.page-hero .page-stamp,.story-hero-inner{position:relative;z-index:2}
