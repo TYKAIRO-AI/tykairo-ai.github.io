@@ -2,8 +2,7 @@
 /* Load upgraded official brand files without ever flashing a broken image. */
 (()=>{const root=document.documentElement;const assetList=[
  {kind:'red',url:'/assets/user/tykairo-red-logo.webp',className:'brand-red-ready',doReplace:true},
- {kind:'hero',url:'/assets/user/tykairo-home-hero.webp',className:'brand-hero-ready'},
- {kind:'cover',url:'/assets/user/tykairo-inner-bg.webp',className:'brand-cover-ready'}
+
 ];for(const a of assetList){const probe=new Image();probe.decoding='async';probe.onload=()=>{root.classList.add(a.className);if(a.doReplace)document.querySelectorAll('[data-brand-logo]').forEach(img=>{img.src=a.url;img.alt='TYKAIRO-AI red metallic logo';})};probe.onerror=()=>{};probe.src=a.url;}})();
 
 /* Optional GA4 analytics, activated only after visitor consent. */
