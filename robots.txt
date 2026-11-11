@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tykairo-ai.github.io/sitemap.txt
+Sitemap: https://tykairo-ai.github.io/sitemap.xml
