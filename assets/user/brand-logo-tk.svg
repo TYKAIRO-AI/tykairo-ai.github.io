@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+<title id="title">TYKAIRO TK emblem</title>
+<defs>
+ <linearGradient id="red" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff8b8b"/><stop offset=".28" stop-color="#ff293e"/><stop offset=".62" stop-color="#a80720"/><stop offset="1" stop-color="#ff5a62"/></linearGradient>
+ <linearGradient id="steel" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#fff"/><stop offset=".22" stop-color="#aeb8c5"/><stop offset=".5" stop-color="#3e4652"/><stop offset=".78" stop-color="#dce2e8"/><stop offset="1" stop-color="#68717d"/></linearGradient>
+ <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffb5b8"/><stop offset=".5" stop-color="#e01830"/><stop offset="1" stop-color="#590815"/></linearGradient>
+ <radialGradient id="orb"><stop stop-color="#fff"/><stop offset=".24" stop-color="#ff8b8b"/><stop offset=".62" stop-color="#ff172f"/><stop offset="1" stop-color="#65000f"/></radialGradient>
+ <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur in="SourceAlpha" stdDeviation="7"/><feOffset dy="8"/><feComponentTransfer><feFuncA type="linear" slope=".7"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<circle cx="256" cy="256" r="210" fill="none" stroke="#9d1024" stroke-width="3" opacity=".45"/>
+<ellipse cx="256" cy="256" rx="218" ry="104" fill="none" stroke="#ff243b" stroke-width="8" opacity=".9" transform="rotate(-28 256 256)" filter="url(#glow)"/>
+<ellipse cx="256" cy="256" rx="224" ry="96" fill="none" stroke="#ff7b83" stroke-width="2.5" opacity=".85" transform="rotate(52 256 256)"/>
+<g filter="url(#shadow)" stroke-linejoin="round">
+ <path d="M74 150H290L254 205H186V365L129 426V205H109Z" fill="url(#steel)" stroke="#f7faff" stroke-width="5"/>
+ <path d="M186 205H254L231 232H186Z" fill="#111820" opacity=".9"/>
+ <path d="M257 151H438L390 208H326L266 268V365L209 425V245Z" fill="url(#red)" stroke="#ffb2b6" stroke-width="5"/>
+ <path d="M326 208H390L366 235H300L266 268V245Z" fill="url(#steel)" stroke="#e9edf2" stroke-width="3"/>
+ <path d="M267 267L327 267L438 385H353Z" fill="url(#red)" stroke="#ff9da4" stroke-width="4"/>
+</g>
+<g filter="url(#glow)"><circle cx="420" cy="105" r="27" fill="url(#orb)"/><circle cx="91" cy="391" r="24" fill="url(#orb)"/></g>
+</svg>
