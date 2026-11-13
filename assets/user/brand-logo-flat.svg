@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">TYKAIRO-AI flat TK emblem</title>
+<desc id="desc">A simplified red and silver geometric T and K monogram with a red orbital ring.</desc>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M91 126H421" stroke="#E32636" stroke-width="48"/>
+  <path d="M256 126V399" stroke="#E32636" stroke-width="54"/>
+  <path d="M278 278L397 164" stroke="#F2F2F2" stroke-width="45"/>
+  <path d="M278 278L405 397" stroke="#F2F2F2" stroke-width="45"/>
+  <path d="M78 332C145 445 337 447 437 283C463 240 457 178 421 143" stroke="#E32636" stroke-width="12"/>
+  <path d="M75 332C145 219 333 194 438 280" stroke="#E32636" stroke-width="5" opacity=".72"/>
+</g>
+<circle cx="78" cy="332" r="16" fill="#E32636"/>
+<circle cx="421" cy="143" r="13" fill="#E32636"/>
+</svg>
