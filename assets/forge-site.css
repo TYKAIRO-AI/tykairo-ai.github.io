@@ -13,7 +13,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset
 .topbar{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:100;width:min(1380px,calc(100% - 32px));background:rgba(13,13,16,.85);backdrop-filter:blur(22px);border:1px solid #403139;border-radius:14px;box-shadow:0 12px 50px #0007}
 .nav{height:69px;display:flex;align-items:center;gap:26px;padding:0 21px}
 .brand{display:flex;align-items:center;gap:11px;white-space:nowrap;flex-shrink:0}
-.brand img{height:52px;width:52px;flex:0 0 52px;object-fit:contain;filter:none;opacity:1;mix-blend-mode:normal;}
+.brand img{height:52px;width:52px;flex:0 0 52px;object-fit:contain;filter:drop-shadow(0 0 8px #ff46504a)}
 .brand strong{font:800 18px 'Space Grotesk',sans-serif;letter-spacing:.075em}
 .brand strong span{color:var(--red)}
 .brand em{display:block;font:700 8px 'Space Grotesk';font-style:normal;letter-spacing:.25em;color:#b8a7aa;margin-top:0}
