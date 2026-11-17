@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">TYKAIRO AI — Invoice Automation</title>
+<desc id="desc">A premium dark red and graphite vector cover showing invoice capture, Mindee OCR, data validation, email-based human review, approval routing and record storage.</desc>
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#090b11"/><stop offset=".55" stop-color="#11131b"/><stop offset="1" stop-color="#050609"/></linearGradient>
+ <linearGradient id="red" x2="1" y2="1"><stop stop-color="#ff5656"/><stop offset=".5" stop-color="#e50920"/><stop offset="1" stop-color="#8f0014"/></linearGradient>
+ <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#242a37" stop-opacity=".96"/><stop offset="1" stop-color="#11141d" stop-opacity=".98"/></linearGradient>
+ <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#dce4ef"/></linearGradient>
+ <linearGradient id="blue" x2="1" y2="1"><stop stop-color="#8ce4ff"/><stop offset="1" stop-color="#2874ff"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="14" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="shadow"><feGaussianBlur stdDeviation="18"/></filter>
+ <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#aebbd0" stroke-opacity=".055"/></pattern>
+ </defs>
+ <rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+ <path d="M0 0H18V900H0Z" fill="url(#red)"/><path d="M0 482H1600" stroke="#f1273a" stroke-opacity=".32"/>
+ <ellipse cx="1180" cy="300" rx="420" ry="270" fill="#e50920" opacity=".08" filter="url(#shadow)"/>
+ <!-- brand -->
+ <g transform="translate(76 45)">
+  <path d="M8 18 58 0 108 18 99 80 58 105 17 80Z" fill="#11151d" stroke="#f02a3d" stroke-width="3"/>
+  <path d="M26 68 49 19H69L45 83H27L78 19H99L70 83H51" fill="none" stroke="#fff" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M26 68 49 19H69" fill="none" stroke="#f1263b" stroke-width="7"/>
+  <path d="M130 6V99" stroke="#596171" stroke-width="2"/>
+  <text x="157" y="48" fill="#fff" font-family="Arial,sans-serif" font-size="38" font-weight="800" letter-spacing="2">TYKAIRO <tspan fill="#f02a3d">AI</tspan></text>
+  <text x="160" y="79" fill="#9ba4b4" font-family="Arial,sans-serif" font-size="15" letter-spacing="4">AI AUTOMATION SOLUTIONS</text>
+ </g>
+ <g transform="translate(1090 58)">
+  <circle cx="18" cy="22" r="7" fill="#f02a3d"/><circle cx="48" cy="7" r="7" fill="#f02a3d"/><circle cx="48" cy="37" r="7" fill="#f02a3d"/>
+  <path d="M24 19 42 9M24 25 42 35" stroke="#f02a3d" stroke-width="4"/>
+  <text x="72" y="31" fill="#f4f6fb" font-family="Arial,sans-serif" font-size="35" font-weight="700">n8n</text>
+  <path d="M190 0V45" stroke="#586170" stroke-width="2"/>
+  <rect x="215" y="-3" width="220" height="48" rx="24" fill="#0b2118" stroke="#27d982" stroke-width="2"/>
+  <circle cx="241" cy="21" r="14" fill="#24d77d"/><path d="m234 21 5 5 10-12" fill="none" stroke="#052b19" stroke-width="3"/>
+  <text x="266" y="29" fill="#dfffee" font-family="Arial,sans-serif" font-size="18" font-weight="700">APPROVED WORKFLOW</text>
+ </g>
+ <!-- headline -->
+ <text x="82" y="226" fill="#fff" font-family="Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="-3">INVOICE</text>
+ <text x="82" y="312" fill="#ff3448" font-family="Arial,sans-serif" font-size="82" font-weight="800" letter-spacing="-3">AUTOMATION</text>
+ <text x="88" y="370" fill="#e9edf5" font-family="Arial,sans-serif" font-size="29" font-weight="500">Extract and approve invoices with</text>
+ <rect x="88" y="394" width="174" height="52" rx="13" fill="#f7f9fc"/>
+ <path d="M108 408h12v26h-12zm20 0h12v26h-12" fill="none" stroke="#e51b32" stroke-width="5"/>
+ <text x="155" y="430" fill="#171b24" font-family="Arial,sans-serif" font-size="28" font-weight="800">Mindee</text>
+ <text x="282" y="430" fill="#e9edf5" font-family="Arial,sans-serif" font-size="29">OCR + email review</text>
+ <path d="M88 470H700" stroke="url(#red)" stroke-width="4" filter="url(#glow)"/>
+ <text x="90" y="505" fill="#aeb7c6" font-family="Arial,sans-serif" font-size="18" letter-spacing="2">AUTOMATED EXTRACTION. HUMAN-CONTROLLED DECISIONS.</text>
+ <!-- invoice paper -->
+ <g transform="translate(790 145)">
+  <rect x="10" y="10" width="270" height="310" rx="18" fill="#4b9cff" opacity=".13" filter="url(#glow)"/>
+  <rect x="0" y="0" width="270" height="310" rx="16" fill="url(#paper)" stroke="#9ddfff" stroke-width="3"/>
+  <text x="28" y="49" fill="#121a28" font-family="Arial,sans-serif" font-size="23" font-weight="800">INVOICE</text>
+  <text x="28" y="75" fill="#69788d" font-family="Arial,sans-serif" font-size="12">DOCUMENT #INV-2048</text>
+  <path d="M28 97H240M28 112H170M28 141H240M28 158H240M28 175H240M28 192H240" stroke="#aeb8c7" stroke-width="5" stroke-linecap="round"/>
+  <path d="M28 221H240" stroke="#d0d7e1" stroke-width="2"/>
+  <text x="28" y="253" fill="#64748b" font-family="Arial,sans-serif" font-size="13">TOTAL DUE</text>
+  <text x="28" y="286" fill="#121a28" font-family="Arial,sans-serif" font-size="30" font-weight="800">$ 2,480.00</text>
+  <path d="M-18 115H-3V215H-18M288 115H273V215H288" fill="none" stroke="#ff3348" stroke-width="7" stroke-linecap="round"/>
+  <rect x="30" y="330" width="210" height="54" rx="13" fill="#171b25" stroke="#ff3549" stroke-width="2"/>
+  <text x="52" y="365" fill="#ff4255" font-family="Arial,sans-serif" font-size="19" font-weight="800">[ ] OCR EXTRACTED</text>
+ </g>
+ <!-- laptop review -->
+ <g transform="translate(1080 145)">
+  <rect x="0" y="0" width="430" height="280" rx="22" fill="#090c13" stroke="#9ca7b9" stroke-width="5"/>
+  <rect x="16" y="17" width="398" height="246" rx="12" fill="#eef3fa"/>
+  <path d="M16 51H414" stroke="#d3dbe7" stroke-width="2"/>
+  <circle cx="34" cy="34" r="5" fill="#f35b61"/><circle cx="52" cy="34" r="5" fill="#f1ba4b"/><circle cx="70" cy="34" r="5" fill="#31c879"/>
+  <rect x="49" y="77" width="48" height="48" rx="12" fill="#ffe6e9"/>
+  <path d="M60 89h27v22H60zM60 91l13 10 14-10" fill="none" stroke="#e51b32" stroke-width="3"/>
+  <text x="115" y="106" fill="#111827" font-family="Arial,sans-serif" font-size="26" font-weight="800">Invoice Review</text>
+  <text x="49" y="153" fill="#566273" font-family="Arial,sans-serif" font-size="17">Review extracted invoice data</text>
+  <text x="49" y="178" fill="#566273" font-family="Arial,sans-serif" font-size="17">and choose the next action.</text>
+  <rect x="48" y="199" width="158" height="45" rx="10" fill="#12a96a"/>
+  <path d="m67 222 9 9 17-20" fill="none" stroke="#fff" stroke-width="4"/>
+  <text x="104" y="228" fill="#fff" font-family="Arial,sans-serif" font-size="18" font-weight="800">APPROVE</text>
+  <rect x="222" y="199" width="150" height="45" rx="10" fill="#e52b3d"/>
+  <path d="m243 212 19 19m0-19-19 19" stroke="#fff" stroke-width="4"/>
+  <text x="272" y="228" fill="#fff" font-family="Arial,sans-serif" font-size="18" font-weight="800">REJECT</text>
+  <path d="M-28 283H458L425 306H5Z" fill="#8993a3" stroke="#c4ccd8" stroke-width="3"/>
+  <path d="M-15 283H445" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>
+ </g>
+ <!-- workflow rail -->
+ <g transform="translate(75 555)">
+  <rect x="0" y="0" width="1450" height="205" rx="27" fill="url(#glass)" stroke="#f12a40" stroke-width="2.5"/>
+  <rect x="8" y="8" width="1434" height="189" rx="22" fill="none" stroke="#fff" stroke-opacity=".08"/>
+  <text x="30" y="37" fill="#ff6574" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="3">HOW THE WORKFLOW RUNS</text>
+  <!-- nodes -->
+  <g font-family="Arial,sans-serif" text-anchor="middle">
+   <g transform="translate(88 65)"><rect width="145" height="86" rx="16" fill="#f5f7fb"/><path d="M57 22h32l18 18v27H57zM89 22v19h18M68 52h29M68 62h24" fill="none" stroke="#e51b32" stroke-width="5" stroke-linejoin="round"/><text x="72" y="119" fill="#fff" font-size="17" font-weight="700">NEW INVOICE</text><text x="72" y="140" fill="#aeb8c8" font-size="14">Trigger</text></g>
+   <g transform="translate(310 65)"><rect width="145" height="86" rx="16" fill="#f5f7fb"/><path d="M48 28h12v32H48m37-32h12v32H85" fill="none" stroke="#e51b32" stroke-width="6"/><text x="72" y="119" fill="#fff" font-size="17" font-weight="700">MINDEE OCR</text><text x="72" y="140" fill="#aeb8c8" font-size="14">Extract fields</text></g>
+   <g transform="translate(532 65)"><rect width="145" height="86" rx="16" fill="#f5f7fb"/><path d="m65 23-15 20h15l-7 22 27-30H69l7-12z" fill="#e8a21a"/><text x="72" y="119" fill="#fff" font-size="17" font-weight="700">VALIDATE DATA</text><text x="72" y="140" fill="#aeb8c8" font-size="14">Format &amp; check</text></g>
+   <g transform="translate(754 65)"><rect width="145" height="86" rx="16" fill="#f5f7fb"/><rect x="43" y="27" width="58" height="36" rx="5" fill="none" stroke="#2869ed" stroke-width="5"/><path d="m44 30 28 21 29-21" fill="none" stroke="#2869ed" stroke-width="5"/><text x="72" y="119" fill="#fff" font-size="17" font-weight="700">EMAIL REVIEW</text><text x="72" y="140" fill="#aeb8c8" font-size="14">Human decision</text></g>
+   <g transform="translate(976 65)"><rect width="145" height="86" rx="16" fill="#171d27" stroke="#4e5a6b"/><circle cx="72" cy="42" r="24" fill="#132c22" stroke="#20d67d" stroke-width="3"/><path d="m60 42 9 9 17-20" fill="none" stroke="#20d67d" stroke-width="5"/><text x="72" y="119" fill="#fff" font-size="17" font-weight="700">APPROVAL</text><text x="72" y="140" fill="#aeb8c8" font-size="14">Approve / reject</text></g>
+   <g transform="translate(1198 65)"><rect width="190" height="86" rx="16" fill="#f5f7fb"/><ellipse cx="95" cy="34" rx="23" ry="9" fill="none" stroke="#813bc2" stroke-width="5"/><path d="M72 34v25c0 12 46 12 46 0V34M72 46c0 12 46 12 46 0" fill="none" stroke="#813bc2" stroke-width="5"/><text x="95" y="119" fill="#fff" font-size="17" font-weight="700">STORE / UPDATE</text><text x="95" y="140" fill="#aeb8c8" font-size="14">Approved records</text></g>
+  </g>
+  <g fill="none" stroke="#d6deea" stroke-width="4" stroke-linecap="round"><path d="M238 108h57m-9-8 9 8-9 8M460 108h57m-9-8 9 8-9 8M682 108h57m-9-8 9 8-9 8M904 108h57m-9-8 9 8-9 8M1126 108h57m-9-8 9 8-9 8"/></g>
+ </g>
+ <!-- bottom benefits -->
+ <g transform="translate(78 812)" font-family="Arial,sans-serif">
+  <g><circle cx="28" cy="0" r="23" fill="#260b12" stroke="#f02a3d" stroke-width="2"/><path d="m32-19-15 22h12l-3 17L43-5H31z" fill="#ff3448"/><text x="68" y="-3" fill="#fff" font-size="20" font-weight="700">SAVE TIME</text><text x="68" y="21" fill="#9fa9b8" font-size="14">Automate invoice intake</text></g>
+  <path d="M390-27V30" stroke="#515968"/>
+  <g transform="translate(420)"><circle cx="28" cy="0" r="23" fill="#260b12" stroke="#f02a3d" stroke-width="2"/><circle cx="28" cy="0" r="12" fill="none" stroke="#ff3448" stroke-width="4"/><path d="m28-16 15-8-4 16" fill="none" stroke="#ff3448" stroke-width="4"/><text x="68" y="-3" fill="#fff" font-size="20" font-weight="700">REDUCE MANUAL ERRORS</text><text x="68" y="21" fill="#9fa9b8" font-size="14">Structured OCR extraction</text></g>
+  <path d="M830-27V30" stroke="#515968"/>
+  <g transform="translate(860)"><circle cx="28" cy="0" r="23" fill="#260b12" stroke="#f02a3d" stroke-width="2"/><circle cx="20" cy="-7" r="7" fill="#ff3448"/><circle cx="36" cy="-7" r="7" fill="#ff3448"/><path d="M8 16q1-17 12-17t12 17m-4 0q1-17 12-17t12 17" fill="none" stroke="#ff3448" stroke-width="4"/><text x="68" y="-3" fill="#fff" font-size="20" font-weight="700">KEEP HUMAN CONTROL</text><text x="68" y="21" fill="#9fa9b8" font-size="14">Review before approval</text></g>
+  <path d="M1240-27V30" stroke="#515968"/>
+  <g transform="translate(1270)"><circle cx="28" cy="0" r="23" fill="#260b12" stroke="#f02a3d" stroke-width="2"/><path d="M12 13V-2h11V13m4 0v-25h11v25m4 0V-8h11v21" fill="none" stroke="#ff3448" stroke-width="4"/><text x="68" y="-3" fill="#fff" font-size="20" font-weight="700">WORK SMARTER</text><text x="68" y="21" fill="#9fa9b8" font-size="14">A clear, traceable process</text></g>
+ </g>
+</svg>
