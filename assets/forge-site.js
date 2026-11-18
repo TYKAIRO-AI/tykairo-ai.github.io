@@ -13,5 +13,5 @@
 ['/technology/','Technology','التقنيات'],
 ['/about/','About','عن الشركة'],
 ['/founder/mahmoud-hisham/','Founder','المؤسس'],
-['/store/','Digital Store','المتجر الرقمي'],['/contact/','Contact Us','تواصل معنا']
+['/contact/','Contact Us','تواصل معنا'],['/store/','Digital Store','المتجر الرقمي']
 ];const p=location.pathname;document.querySelectorAll('.navlinks').forEach(nav=>{const current=items.find(([href])=>href!=='/'&&(p===href||p.startsWith(href)&&href!=='/store/'))?.[0]|| (p.startsWith('/store/')?'/store/':null);nav.innerHTML=items.map(([href,en,ar])=>{const active=href===current?' aria-current="page"':'';const cls=href==='/contact/'?' class="nav-contact-item"':'';return '<a href="'+href+'"'+cls+active+'><span data-en="'+en+'" data-ar="'+ar+'">'+en+'</span></a>'}).join('')});})();
