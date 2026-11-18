@@ -6,7 +6,7 @@
     "belmasry-ai.webp": "05 — بالمصري",
     "fahhemny-ai.webp": "06 — فهّمني",
     "shoghlana-ai.webp": "07 — شغلانة",
-    "n8n-flowwiz-ai.webp": "08 — N8n FlowWiz AI (LocalOps MCP Pro artwork confirmed by user)",
+    "n8n-flowwiz-ai.webp": "08 — n8n FlowWiz AI (user-supplied matching artwork; replaces mismatched LocalOps MCP Pro artwork)",
     "ai-influencer-studio.webp": "09 — AI Influencer Studio",
     "ai-cost-optimizer.webp": "10 — AI Cost Optimizer",
     "small-model-booster.webp": "11 — Small Model Booster",
@@ -22,6 +22,8 @@
     "cloneshift.webp": "22 — CloneShift — AI Video Clone & Remix",
     "content-repurposing-factory.webp": "23 — Content Repurposing Factory",
     "one-product-30-ads.webp": "24 — One Product → 30 Ads",
-    "viral-shorts-factory.webp": "25 — Viral Shorts Factory v2.0 — AI Short Director"
+    "viral-shorts-factory.webp": "25 — Viral Shorts Factory v2.0 — AI Short Director",
+    "n8n-templatefactory-pro.webp": "03 — n8n TemplateFactory Pro (user-supplied matching artwork)",
+    "n8n-mcplink-pro.webp": "04 — n8n MCPLink Pro (user-supplied matching artwork)"
   }
 }
