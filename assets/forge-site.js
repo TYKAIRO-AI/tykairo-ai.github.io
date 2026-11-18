@@ -2,3 +2,6 @@
 /* Brand emblem is rendered directly from the approved asset in HTML to prevent logo flashes. */
 /* Optional GA4 analytics, activated only after visitor consent. */
 (()=>{const el=document.createElement('script');el.src='/assets/ga4-consent.js?v=20261030';el.defer=true;document.head.appendChild(el);})();
+
+/* Global Digital Store navigation — available across all pages using the shared site shell. */
+(()=>{const p=location.pathname;document.querySelectorAll('.navlinks').forEach(nav=>{if(nav.querySelector('a[href="/store/"]'))return;const a=document.createElement('a');a.href='/store/';a.innerHTML='<span data-en="Digital Store" data-ar="المتجر الرقمي">Digital Store</span>';if(p.startsWith('/store/'))a.setAttribute('aria-current','page');const contact=nav.querySelector('.nav-contact-item');if(contact)nav.insertBefore(a,contact);else nav.append(a)});})();
