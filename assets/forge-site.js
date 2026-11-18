@@ -3,5 +3,15 @@
 /* Optional GA4 analytics, activated only after visitor consent. */
 (()=>{const el=document.createElement('script');el.src='/assets/ga4-consent.js?v=20261030';el.defer=true;document.head.appendChild(el);})();
 
-/* Global Digital Store navigation — available across all pages using the shared site shell. */
-(()=>{const p=location.pathname;document.querySelectorAll('.navlinks').forEach(nav=>{if(nav.querySelector('a[href="/store/"]'))return;const a=document.createElement('a');a.href='/store/';a.innerHTML='<span data-en="Digital Store" data-ar="المتجر الرقمي">Digital Store</span>';if(p.startsWith('/store/'))a.setAttribute('aria-current','page');const contact=nav.querySelector('.nav-contact-item');if(contact)nav.insertBefore(a,contact);else nav.append(a)});})();
+/* Canonical navigation order across every company page. */
+(()=>{const items=[
+['/','Home','الرئيسية'],
+['/projects/','Software','البرامج'],
+['/store/','Digital Store','المتجر الرقمي'],
+['/work-flow-n8n/','n8n Workflows','ورك فلو n8n'],
+['/skills/','Capafy Skills','مهارات Capafy'],
+['/technology/','Technology','التقنيات'],
+['/about/','About','عن الشركة'],
+['/founder/mahmoud-hisham/','Founder','المؤسس'],
+['/contact/','Contact Us','تواصل معنا']
+];const p=location.pathname;document.querySelectorAll('.navlinks').forEach(nav=>{const current=items.find(([href])=>href!=='/'&&(p===href||p.startsWith(href)&&href!=='/store/'))?.[0]|| (p.startsWith('/store/')?'/store/':null);nav.innerHTML=items.map(([href,en,ar])=>{const active=href===current?' aria-current="page"':'';const cls=href==='/contact/'?' class="nav-contact-item"':'';return '<a href="'+href+'"'+cls+active+'><span data-en="'+en+'" data-ar="'+ar+'">'+en+'</span></a>'}).join('')});})();
