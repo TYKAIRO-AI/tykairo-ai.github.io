@@ -1,0 +1,27 @@
+{
+  "format": "WebP",
+  "max_dimensions": "320x320",
+  "quality": 55,
+  "files": {
+    "belmasry-ai.webp": "05 — بالمصري",
+    "fahhemny-ai.webp": "06 — فهّمني",
+    "shoghlana-ai.webp": "07 — شغلانة",
+    "n8n-flowwiz-ai.webp": "08 — N8n FlowWiz AI (LocalOps MCP Pro artwork confirmed by user)",
+    "ai-influencer-studio.webp": "09 — AI Influencer Studio",
+    "ai-cost-optimizer.webp": "10 — AI Cost Optimizer",
+    "small-model-booster.webp": "11 — Small Model Booster",
+    "ad-in-your-dialect.webp": "12 — إعلان بلهجتك — واضح ومباشر",
+    "competitor-ad-remix.webp": "13 — Competitor Ad Remix",
+    "product-demo-video-director.webp": "14 — Product Demo Video Director",
+    "viral-hooks-factory.webp": "16 — Viral Hooks Factory — TikTok",
+    "ugc-ad-factory.webp": "17 — UGC Ad Factory",
+    "proof-to-casefile.webp": "18 — Proof to Casefile",
+    "launch-cohort-replay.webp": "19 — Launch Cohort Replay",
+    "comment-demand-lab.webp": "20 — Comment Demand Lab",
+    "agentshield.webp": "21 — AgentShield — AI Skill & MCP Security Scanner",
+    "cloneshift.webp": "22 — CloneShift — AI Video Clone & Remix",
+    "content-repurposing-factory.webp": "23 — Content Repurposing Factory",
+    "one-product-30-ads.webp": "24 — One Product → 30 Ads",
+    "viral-shorts-factory.webp": "25 — Viral Shorts Factory v2.0 — AI Short Director"
+  }
+}
