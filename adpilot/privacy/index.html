@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Draft privacy notice for ADPILOT by TYKAIRO AI.">
+<title>ADPILOT Privacy Policy | TYKAIRO AI</title>
+<link rel="stylesheet" href="/assets/forge-site.css">
+<link rel="stylesheet" href="/assets/cinematic-2026.css">
+<style>
+:root{color-scheme:dark}body{background:#08090d;color:#e9eaf0}.legal-wrap{max-width:940px;margin:0 auto;padding:56px 22px 90px}.legal-card{background:#11131b;border:1px solid #292d3b;border-radius:20px;padding:clamp(22px,4vw,48px);box-shadow:0 20px 60px #0005}.legal-kicker{color:#ff626b;font-weight:800;letter-spacing:.12em;font-size:12px}.legal-wrap h1{font-size:clamp(32px,5vw,48px);line-height:1.1;margin:12px 0}.legal-wrap h2{font-size:22px;margin:34px 0 10px;color:#fff}.legal-wrap p,.legal-wrap li{color:#c5c8d3;line-height:1.8}.legal-wrap a{color:#ff858b}.draft{border:1px solid #805f26;background:#302511;color:#ffe1a0;padding:14px 16px;border-radius:12px;margin:20px 0}.legal-meta{color:#9298a9;font-size:13px}.legal-wrap ul{padding-inline-start:24px}.lang{border-top:1px solid #303443;margin-top:36px;padding-top:28px}.legal-foot{margin-top:28px;color:#9298a9;font-size:13px}
+</style>
+</head>
+<body>
+<main class="legal-wrap">
+<article class="legal-card">
+<div class="legal-kicker">TYKAIRO AI / ADPILOT</div>
+<h1>Privacy Policy</h1>
+<p class="legal-meta">Draft for review · Prepared 22 November 2026 · Not yet effective</p>
+<div class="draft"><strong>Draft — do not treat this page as the published policy.</strong> This notice must be checked against the deployed product, Meta configuration, actual data-retention settings and the legal identity/contact details of the operator before publication.</div>
+<p>This draft explains how TYKAIRO AI ("TYKAIRO", "we", "us") handles information in connection with ADPILOT, an AI-assisted marketing operations application offered primarily as self-hosted software. It distinguishes information processed inside a customer's own ADPILOT installation from the limited information handled by TYKAIRO CONNECT for account authorization.</p>
+
+<h2>1. Who operates ADPILOT</h2>
+<p>ADPILOT is developed and provided by TYKAIRO AI. Privacy questions and requests can be sent to <a href="mailto:tykairoai@gmail.com">tykairoai@gmail.com</a>. The legal entity name and registered business address must be added here before this policy is published.</p>
+
+<h2>2. The self-hosted model</h2>
+<p>ADPILOT is designed to run in an installation controlled by the customer. Business records created in that installation — such as campaign plans, creative drafts, leads, conversations, workspace records and reports — are stored in the customer's configured application/database environment. TYKAIRO does not receive a central copy of those records merely because the customer installs or uses ADPILOT.</p>
+<p>The customer or organization operating the installation is responsible for its hosting environment, administrator access, backups, user permissions and the privacy notices or lawful permissions required for the data it chooses to process.</p>
+
+<h2>3. Information TYKAIRO may receive</h2>
+<ul>
+<li><strong>Support and contact information:</strong> information you send us, such as your name, email address, installation details and the contents of a support request.</li>
+<li><strong>Limited service and security information:</strong> information needed to operate, protect, troubleshoot and maintain TYKAIRO services, such as service status, software version, request timestamps and security/error diagnostics, where these are enabled. Diagnostic data should not contain passwords, access tokens, AI keys, message contents or lead details.</li>
+<li><strong>OAuth connection metadata:</strong> when an administrator connects Google or Meta through TYKAIRO CONNECT, the service processes the authorization response and stores the provider, workspace identifier, granted permission names, connection status and token expiry/connection timestamps.</li>
+</ul>
+
+<h2>4. Google and Meta authorization tokens</h2>
+<p>TYKAIRO CONNECT currently stores Google and Meta OAuth access tokens, and Google refresh tokens when supplied, in Cloudflare D1 after encrypting them using AES-GCM (256-bit key). The current implementation does not return token values through its ordinary connection-status API. These records are not the same as the customer's campaign, lead or conversation database.</p>
+<p>Because the encrypted OAuth records are held in infrastructure operated for TYKAIRO CONNECT, this draft does <strong>not</strong> claim that TYKAIRO has zero technical or administrative access to that infrastructure. Access to production infrastructure must be restricted to authorized operators and protected with appropriate access controls. The deployed access-control and key-management arrangements must be verified before publication.</p>
+<p>Disconnecting a provider through the supported connection endpoint deletes that provider's connection record for the installation. A separate request can be sent to the contact address above. Any backup copies, provider-side records and legally required records may be subject to separate retention periods that must be documented before this policy becomes effective.</p>
+
+<h2>5. Information accessed from connected platforms</h2>
+<p>When a customer authorizes Meta or Google, ADPILOT/CONNECT can request only the permissions configured for the integration and actually granted by the account holder. Depending on the enabled features, this may include ad-account, campaign, Page or Google service information. The exact data available depends on the permissions, selected assets, provider terms and features enabled by the customer.</p>
+<p>Meta and Google process information under their own privacy policies and platform terms. Customers should review those terms and ensure they have authority to connect the relevant business assets.</p>
+
+<h2>6. AI providers and external services</h2>
+<p>ADPILOT can be configured to use an AI provider selected by the customer, including an OpenAI-compatible provider, Ollama or OmniRoute. When a user invokes an AI feature, the relevant prompt and information selected or required for that feature may be sent to the configured provider. The provider may process that information under its own terms and privacy policy. Customers should not submit personal or confidential information to an AI provider unless they are authorized to do so and have configured an appropriate provider and data-processing arrangement.</p>
+<p>Where a customer uses a local AI provider, processing may remain within the customer's environment, subject to that customer's network and deployment configuration.</p>
+
+<h2>7. Purposes and legal grounds</h2>
+<p>Information is used to provide and maintain the software and integrations, authenticate connections, protect services, respond to support requests, diagnose faults, meet applicable legal obligations and improve reliability. Where applicable law requires a legal basis, TYKAIRO will identify the appropriate basis for each processing activity (such as contract, legitimate interests, consent or legal obligation) in the final published notice.</p>
+
+<h2>8. Sharing and service providers</h2>
+<p>TYKAIRO does not sell personal information. Limited information may be processed by infrastructure and integration providers needed to operate the service, including Cloudflare for TYKAIRO CONNECT and Meta or Google when a user chooses to connect those platforms. AI providers are selected/configured by the customer for AI features. A final provider list, locations, contractual safeguards and applicable transfer arrangements must be confirmed before publication.</p>
+
+<h2>9. Security</h2>
+<p>We intend to apply data minimization, least-privilege access, encryption for OAuth tokens at rest, secure transport, access controls and secret-redaction practices. No system can be guaranteed completely secure. The actual production controls, key rotation/recovery process, audit logging and incident-response procedure must be tested and documented before this notice is published.</p>
+
+<h2>10. Retention and deletion</h2>
+<p>Customer application data is retained in the customer's self-hosted environment according to that customer's configuration and deletion practices. TYKAIRO CONNECT retains OAuth connection records while the connection is active and until it is disconnected or a valid deletion request is processed, subject to any documented backup or legal retention requirements. Exact backup and log retention periods must be added before publication.</p>
+<p>To request deletion of information held by TYKAIRO, email <a href="mailto:tykairoai@gmail.com">tykairoai@gmail.com</a> from the account email where possible and include the product name and installation/workspace identifier. Do not email passwords, access tokens or secret keys. For customer-hosted application records, contact the administrator of that ADPILOT installation.</p>
+<p>For Meta-related deletion instructions, see <a href="/adpilot/data-deletion/">ADPILOT Data Deletion Instructions</a>.</p>
+
+<h2>11. Children's privacy</h2>
+<p>ADPILOT is a business software product and is not intended for children. Do not use it to knowingly collect children's personal information unless the customer has an appropriate lawful basis and safeguards.</p>
+
+<h2>12. International processing</h2>
+<p>Self-hosted customer data may be stored in the location selected by the customer. TYKAIRO CONNECT and external providers may process limited information in other countries. The final policy must identify relevant processing locations and safeguards based on the production configuration.</p>
+
+<h2>13. Changes to this policy</h2>
+<p>We may update this notice as the product and its data practices change. The published version will show its effective date and material changes.</p>
+
+<h2>14. Contact</h2>
+<p>Privacy requests and questions: <a href="mailto:tykairoai@gmail.com">tykairoai@gmail.com</a>.</p>
+
+<div class="lang">
+<h1 lang="ar" dir="rtl">سياسة الخصوصية</h1>
+<p lang="ar" dir="rtl">هذه مسودة عربية للمراجعة وليست سياسة منشورة أو سارية بعد. توضح كيفية تعامل TYKAIRO AI مع المعلومات المرتبطة ببرنامج ADPILOT، مع التمييز بين البيانات الموجودة على خادم العميل وبيانات ربط الحسابات التي تعالجها خدمة TYKAIRO CONNECT.</p>
+<h2 lang="ar" dir="rtl">نموذج الاستضافة الذاتية</h2>
+<p lang="ar" dir="rtl">صُمم ADPILOT ليعمل على بيئة استضافة يتحكم فيها العميل. وتظل سجلات النشاط التجاري التي ينشئها العميل، مثل خطط الحملات والمسودات والعملاء المحتملين والمحادثات والتقارير، داخل قاعدة البيانات والبيئة التي أعدها العميل. ولا يعني تثبيت البرنامج إرسال نسخة مركزية من هذه السجلات إلى TYKAIRO.</p>
+<h2 lang="ar" dir="rtl">البيانات التي قد تصل إلى TYKAIRO</h2>
+<p lang="ar" dir="rtl">قد نتلقى بيانات التواصل التي يرسلها العميل للدعم، ومعلومات تشغيل وأمان محدودة عند تفعيلها، وبيانات وصفية لازمة لإدارة اتصال Google أو Meta، مثل معرّف مساحة العمل ونوع المزود والصلاحيات الممنوحة وحالة الاتصال وتواريخ انتهاء الرمز.</p>
+<h2 lang="ar" dir="rtl">رموز ربط Meta وGoogle</h2>
+<p lang="ar" dir="rtl">وفق التنفيذ الحالي، تحفظ TYKAIRO CONNECT رموز OAuth الخاصة بـ Meta وGoogle، ورموز التحديث الخاصة بـ Google عند توفرها، داخل Cloudflare D1 بعد تشفيرها باستخدام AES-GCM بمفتاح 256 بت. واجهة حالة الاتصال العادية لا تعرض قيم هذه الرموز. لكن لأنها محفوظة في بنية تحتية تديرها الخدمة، لا يصح أن نزعم أن TYKAIRO لا تملك أي إمكانية تقنية أو إدارية للوصول إلى هذه البنية. يجب تقييد الوصول والتحقق من ضوابط الإنتاج قبل نشر السياسة.</p>
+<h2 lang="ar" dir="rtl">مزودو الذكاء الاصطناعي</h2>
+<p lang="ar" dir="rtl">قد تُرسل المعلومات التي يختارها المستخدم أو يحتاجها طلب الميزة إلى مزود الذكاء الاصطناعي الذي ضبطه العميل. ويخضع هذا المزود لشروطه وسياسة الخصوصية الخاصة به. ويمكن أن تتم المعالجة محليًا عند استخدام مزود محلي، بحسب إعدادات العميل.</p>
+<h2 lang="ar" dir="rtl">الحذف وطلبات الخصوصية</h2>
+<p lang="ar" dir="rtl">يمكن للعميل فصل اتصال المزود من ADPILOT، وهو ما يحذف سجل الاتصال المقابل من TYKAIRO CONNECT وفق الواجهة الحالية. ويمكن إرسال طلبات الخصوصية إلى <a href="mailto:tykairoai@gmail.com">tykairoai@gmail.com</a>. لا ترسل كلمات مرور أو رموز وصول أو مفاتيح سرية عبر البريد. أما بيانات قاعدة ADPILOT المستضافة لدى العميل، فيدير حذفها مسؤول تثبيت العميل.</p>
+<h2 lang="ar" dir="rtl">التواصل</h2>
+<p lang="ar" dir="rtl">للاستفسارات وطلبات الخصوصية: <a href="mailto:tykairoai@gmail.com">tykairoai@gmail.com</a>.</p>
+</div>
+<p class="legal-foot">TYKAIRO AI · ADPILOT · Draft only — publication pending technical and legal review.</p>
+</article>
+</main>
+</body>
+</html>
