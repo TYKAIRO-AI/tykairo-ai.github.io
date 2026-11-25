@@ -1,65 +1,19 @@
-/* TYKAIRO AI — single source of truth for the company header navigation. */
-(()=> {
-  const items = [
-    ["/", "Home"],
-    ["/projects/", "Software"],
-    ["/work-flow-n8n/", "n8n Workflows"],
-    ["/skills/", "Capafy Skills"],
-    ["/technology/", "Technology"],
-    ["/about/", "Company"],
-    ["/founder/mahmoud-hisham/", "Founder"],
-    ["/store/", "Digital Store"],
-    ["/contact/", "Contact"]
-  ];
-  const path = location.pathname.replace(/index\\.html$/, "").replace(/\\/+/g, "/");
-  const active = path === "/" ? "/" : (items.find(([href]) => href !== "/" && path.startsWith(href))?.[0] || null);
-
-  // Always target the navigation element inside the page header, never a content/footer link group.
-  const header = document.querySelector("header");
-  const nav = header?.querySelector("nav");
-  if (!header || !nav) return;
-
-  nav.innerHTML = items.map(([href, label]) => {
-    const current = href === active;
-    return '<a href="' + href + '"' + (current ? ' aria-current="page"' : '') + '>' + label + '</a>';
-  }).join("");
-  nav.setAttribute("aria-label", "Main navigation");
-  nav.setAttribute("translate", "no");
-  nav.classList.add("tykairo-canonical-nav");
-
-  // Standardize the header's primary action without changing unrelated page links.
-  const cta = header.querySelector(".top-contact-cta,.header-cta,.navcta,.nav-cta,.explore");
-  if (cta) {
-    cta.href = "/store/#products";
-    cta.textContent = "Explore Products";
-    cta.setAttribute("aria-label", "Explore Products");
-    cta.setAttribute("translate", "no");
-  }
-
-  // Rebind mobile-menu closing after replacing the navigation links.
-  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
-    nav.classList.remove("open", "nav-open");
-    header.classList.remove("nav-open");
-    header.querySelectorAll(".menu-btn,.menu-toggle,#thanksMenu").forEach(button => {
-      button.setAttribute("aria-expanded", "false");
-      if (button.id === "thanksMenu" || button.classList.contains("menu-toggle")) button.textContent = "☰";
-    });
-  }));
-
-  if (!document.getElementById("tykairo-canonical-nav-style")) {
-    const style = document.createElement("style");
-    style.id = "tykairo-canonical-nav-style";
-    style.textContent = `
-      .tykairo-canonical-nav{direction:ltr!important;unicode-bidi:isolate;align-items:center}
-      .tykairo-canonical-nav a{direction:ltr!important;unicode-bidi:isolate;white-space:nowrap;position:relative;transition:color .18s,background .18s,border-color .18s}
-      .tykairo-canonical-nav a[aria-current="page"]{color:#fff!important;font-weight:800!important}
-      .tykairo-canonical-nav a[aria-current="page"]:after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:2px;background:#f12b43;border-radius:2px}
-      @media(max-width:940px){
-        .tykairo-canonical-nav{flex-direction:column!important;align-items:stretch!important}
-        .tykairo-canonical-nav a[aria-current="page"]{background:rgba(241,43,67,.12);border-radius:7px}
-        .tykairo-canonical-nav a[aria-current="page"]:after{left:0;right:auto;top:8px;bottom:8px;width:3px;height:auto}
-      }
-    `;
-    document.head.appendChild(style);
-  }
-})();
+/* TYKAIRO AI canonical header: one route map and one visual system. */
+(()=>{const items=[["/","Home"],["/projects/","Software"],["/work-flow-n8n/","n8n Workflows"],["/skills/","Capafy Skills"],["/technology/","Technology"],["/about/","Company"],["/founder/mahmoud-hisham/","Founder"],["/store/","Digital Store"],["/contact/","Contact"]];const path=location.pathname.replace(/index\\.html$/,"");const active=path==="/" ? "/" : items.find(([u])=>u!=="/"&&path.startsWith(u))?.[0];const h=document.querySelector("header"),n=h?.querySelector("nav");if(!h||!n)return;n.innerHTML=items.map(([u,t])=>'<a href="'+u+'"'+(u===active?' aria-current="page"':'')+'>'+t+'</a>').join("");n.classList.add("tykairo-nav");const b=h.querySelector(".brand");if(b){b.classList.add("tykairo-brand");const sub=b.querySelector("em,small,.brand-sub");if(sub)sub.textContent="ENGINEERING STUDIO"}const c=h.querySelector(".top-contact-cta,.header-cta,.navcta,.nav-cta,.explore");if(c){c.classList.add("tykairo-cta");c.href="/store/#products";c.innerHTML='Explore Products <span aria-hidden="true">↗</span>'}const l=h.querySelector(".lang-toggle,.lang-btn,.lang");if(l){l.classList.add("tykairo-lang");l.textContent="EN"}const m=h.querySelector(".menu-btn,.menu-toggle,#thanksMenu");if(m)m.classList.add("tykairo-menu");n.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{n.classList.remove("open","nav-open");h.classList.remove("nav-open");m?.setAttribute("aria-expanded","false")}));if(m)m.addEventListener("click",()=>{const open=n.classList.toggle("open");h.classList.toggle("nav-open",open);m.setAttribute("aria-expanded",String(open))});if(!document.getElementById("tykairo-header-css")){const s=document.createElement("style");s.id="tykairo-header-css";s.textContent=`
+header{box-sizing:border-box!important;position:fixed!important;z-index:1000!important;top:14px!important;left:50%!important;transform:translateX(-50%)!important;width:min(1560px,calc(100% - 48px))!important;height:82px!important;min-height:82px!important;margin:0!important;padding:0 24px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;border:1px solid #49303a!important;border-radius:16px!important;background:rgba(10,9,12,.94)!important;backdrop-filter:blur(22px)!important;box-shadow:0 12px 45px #0008!important}
+body{padding-top:110px!important;scroll-padding-top:110px!important}
+header .tykairo-brand{display:flex!important;align-items:center!important;gap:12px!important;flex:0 0 235px!important;min-width:210px!important;white-space:nowrap!important;direction:ltr!important}
+header .tykairo-brand img{width:48px!important;height:48px!important;object-fit:contain!important;flex:0 0 48px!important}
+header .tykairo-brand strong{font:800 18px/1.1 'Space Grotesk','DM Sans',sans-serif!important;letter-spacing:.06em!important}
+header .tykairo-brand em,header .tykairo-brand small,header .tykairo-brand .brand-sub{display:block!important;font:700 8px/1.4 'Space Grotesk','DM Sans',sans-serif!important;font-style:normal!important;letter-spacing:.23em!important;color:#b9a7ad!important;margin-top:4px!important}
+header .tykairo-nav{display:flex!important;flex:1 1 auto!important;min-width:0!important;align-items:center!important;justify-content:center!important;gap:clamp(8px,1.05vw,17px)!important;direction:ltr!important;white-space:nowrap!important;overflow:visible!important}
+header .tykairo-nav a{display:inline-flex!important;align-items:center!important;position:relative!important;padding:9px 0!important;font:700 11px/1.2 'Space Grotesk','DM Sans',sans-serif!important;color:#c9c1c5!important;white-space:nowrap!important;text-decoration:none!important}
+header .tykairo-nav a:hover,header .tykairo-nav a[aria-current="page"]{color:#fff!important}
+header .tykairo-nav a[aria-current="page"]:after{content:""!important;position:absolute!important;left:0!important;right:0!important;bottom:-8px!important;height:2px!important;background:#f12b43!important;border-radius:2px!important}
+header .tykairo-cta{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;min-height:44px!important;padding:0 17px!important;border:1px solid #ff4b60!important;border-radius:10px!important;background:linear-gradient(110deg,#cf102d,#ff334d)!important;color:#fff!important;font:800 12px 'DM Sans',sans-serif!important;white-space:nowrap!important;text-decoration:none!important}
+header .tykairo-lang{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 46px!important;width:46px!important;height:44px!important;padding:0!important;border:1px solid #57404a!important;border-radius:9px!important;background:#1a151a!important;color:#fff!important;font:800 11px 'DM Sans',sans-serif!important}
+header .tykairo-menu{display:none!important}
+@media(max-width:1250px){header{gap:10px!important;padding:0 14px!important}header .tykairo-brand{flex-basis:190px!important;min-width:180px!important}header .tykairo-nav{gap:8px!important}header .tykairo-nav a{font-size:10px!important}header .tykairo-cta{padding:0 10px!important;font-size:10px!important}}
+@media(max-width:980px){header{width:calc(100% - 20px)!important;height:68px!important;min-height:68px!important;top:8px!important;padding:0 12px!important}body{padding-top:90px!important}header .tykairo-brand{flex:1 1 auto!important;min-width:0!important}header .tykairo-brand img{width:42px!important;height:42px!important;flex-basis:42px!important}header .tykairo-nav{display:none!important;position:absolute!important;top:calc(100% + 8px)!important;left:0!important;right:0!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;padding:10px!important;border:1px solid #49303a!important;border-radius:13px!important;background:#100e12!important;box-shadow:0 18px 45px #000b!important;white-space:normal!important}header .tykairo-nav.open,header.nav-open .tykairo-nav{display:flex!important}header .tykairo-nav a{padding:12px!important;font-size:13px!important;border-bottom:1px solid #ffffff12!important}header .tykairo-nav a[aria-current="page"]{background:#f12b4318!important;border-radius:7px!important}header .tykairo-nav a[aria-current="page"]:after{left:0!important;right:auto!important;top:8px!important;bottom:8px!important;width:3px!important;height:auto!important}header .tykairo-cta{min-height:40px!important;padding:0 10px!important;font-size:10px!important}header .tykairo-lang{height:40px!important;width:42px!important;flex-basis:42px!important}header .tykairo-menu{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:40px!important;height:40px!important;border:1px solid #57404a!important;border-radius:9px!important;background:#1a151a!important;color:#fff!important;font-size:20px!important}}
+@media(max-width:520px){header{gap:6px!important;padding:0 8px!important}header .tykairo-brand{gap:6px!important}header .tykairo-brand strong{font-size:14px!important}header .tykairo-brand em,header .tykairo-brand small,header .tykairo-brand .brand-sub{font-size:6px!important}header .tykairo-cta{font-size:0!important;width:38px!important;padding:0!important}header .tykairo-cta span{font-size:15px!important}header .tykairo-lang{width:36px!important;flex-basis:36px!important}}
+`;document.head.appendChild(s)}})();
