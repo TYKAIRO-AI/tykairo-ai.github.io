@@ -191,23 +191,5 @@
     document.head.appendChild(style);
   }
 
-  // Mobile menu handlers for page variants that do not have their own controller.
-  const menuButton = header.querySelector(".menu-toggle,#thanksMenu");
-  if (menuButton && menuButton.id !== "menuToggle" && !menuButton.dataset.tykairoMenuBound) {
-    menuButton.dataset.tykairoMenuBound = "1";
-    menuButton.addEventListener("click", () => {
-      const opened = nav.classList.toggle("open");
-      menuButton.setAttribute("aria-expanded", String(opened));
-      menuButton.setAttribute("aria-label", opened ? "Close navigation menu" : "Open navigation menu");
-      menuButton.textContent = opened ? "×" : "☰";
-    });
-  }
-  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    header.classList.remove("nav-open");
-    const button = header.querySelector(".menu-btn,.menu-toggle,#thanksMenu");
-    button?.setAttribute("aria-expanded", "false");
-    if (button && button.id !== "menuBtn") button.textContent = "☰";
-  }));
 
 })();
