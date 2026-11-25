@@ -53,3 +53,15 @@ body{padding-top:0}.hero{padding-top:130px;scroll-margin-top:100px}
 @keyframes tykairo-store-out{to{opacity:.72}}
 @keyframes tykairo-store-in{from{opacity:.72}to{opacity:1}}
 @media(prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
+
+/* Store header is always an English, left-to-right company navigation.
+   The page content can remain Arabic/RTL independently. */
+.site-header{direction:ltr!important}
+.site-header .brand,.site-header .desktop-nav,.site-header .header-actions{direction:ltr!important}
+.site-header .desktop-nav{flex-direction:row!important;justify-content:center;white-space:nowrap}
+.site-header .desktop-nav a{direction:ltr!important;unicode-bidi:isolate}
+.site-header .header-actions{flex-direction:row!important}
+@media(max-width:760px){
+  .site-header{direction:ltr!important}
+  .site-header .desktop-nav{flex-direction:column!important;align-items:stretch}
+}
