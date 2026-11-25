@@ -63,3 +63,12 @@ body.ar .hero:after{background:linear-gradient(270deg,#070b13 2%,#070b13e8 48%,#
 .mark{width:46px;height:46px;border:0;border-radius:0;margin:0 9px 0 0;background:url('/assets/user/tykairo-tk-emblem.svg') center/contain no-repeat;box-shadow:none;font-size:0}
 .menu a:hover,.menu a.active{color:#ff6878}.navbtn{border-color:#773342}.lang{background:#171015;border-color:#61303b}.btn.primary{background:linear-gradient(110deg,#ef1731,#ff6474);color:#fff}
 @media(max-width:650px){.mark{width:36px;height:36px}}
+
+/* Match legacy skill detail headers to the canonical TYKAIRO company shell. */
+.top{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(1420px,calc(100% - 40px));border:1px solid rgba(255,75,91,.25);border-radius:16px;z-index:100}
+.top .nav{min-height:69px;gap:clamp(12px,1.8vw,26px);direction:ltr}
+.top .brand{display:inline-flex;align-items:center;gap:9px;flex:0 0 auto}
+.top .menu{flex:1;justify-content:center;gap:clamp(10px,1.25vw,19px);direction:ltr;white-space:nowrap;margin:auto}
+.top .menu a{font-size:clamp(9px,.78vw,11px);white-space:nowrap}
+.top .lang{white-space:nowrap;flex:0 0 auto}
+@media(max-width:900px){.top{width:calc(100% - 24px);top:8px}.top .nav{min-height:66px;flex-wrap:wrap;gap:10px;padding:12px 0}.top .menu{order:3;width:100%;overflow-x:auto;justify-content:flex-start;gap:18px;padding:6px 0 8px;margin:0}.top .menu a{font-size:12px;padding:8px 0}}
