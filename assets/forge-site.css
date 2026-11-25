@@ -142,3 +142,11 @@ html[dir=rtl] .orb{direction:ltr}html[dir=rtl] .hero-micro b{direction:ltr}
 /* Keep shared company navigation and hero geometry stable when language changes. */
 .topbar .nav{direction:ltr!important}.topbar .brand,.topbar .nav-actions,.topbar .navlinks{direction:ltr!important}
 html[dir=rtl] .hero-inner{direction:ltr!important}html[dir=rtl] .hero-copy{direction:rtl;text-align:right}html[dir=ltr] .hero-inner{direction:ltr!important}html[dir=ltr] .hero-copy{direction:ltr;text-align:left}
+
+/* Smooth page-to-page transitions where supported, without changing scroll or layout. */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:tykairo-page-out .16s ease both}
+::view-transition-new(root){animation:tykairo-page-in .2s ease both}
+@keyframes tykairo-page-out{to{opacity:.72}}
+@keyframes tykairo-page-in{from{opacity:.72}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
