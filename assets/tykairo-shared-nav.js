@@ -17,7 +17,7 @@
     if (path.endsWith("index.html")) path = path.slice(0, -10);
     if (!path.startsWith("/")) path = "/" + path;
     if (!path.endsWith("/")) path += "/";
-    return path.replace(/\\/+/g, "/");
+    return "/" + path.split("/").filter(Boolean).join("/") + "/";
   };
   const path = normalize(location.pathname);
   const nav = document.querySelector("header nav");
