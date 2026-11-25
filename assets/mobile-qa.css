@@ -47,3 +47,42 @@ table{max-width:100%}
  button,.button,.btn,.pill-btn{white-space:normal;min-width:0}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Homepage-specific responsive refinements */
+@media(max-width:940px){
+  .hub-hero{min-height:82svh;padding:92px 0 58px}
+  .hub-hero .hero-inner{min-height:calc(82svh - 110px);padding-top:clamp(150px,24vh,250px);align-items:flex-end}
+  .hub-hero .hero-copy{max-width:760px}
+  .hub-hero .hero-bottomline{left:24px;right:24px;bottom:18px;gap:12px}
+  .hub-hero .hero-micro{margin-top:24px;flex-wrap:wrap}
+}
+@media(max-width:760px){
+  .hub-hero{min-height:78svh;padding:82px 0 62px}
+  .hub-hero .hero-inner{min-height:0;padding-top:clamp(140px,22vh,205px);padding-bottom:12px}
+  .hub-hero .hero-copy{width:100%}
+  .hub-hero .hero-copy .btnrow{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+  .hub-hero .hero-copy .btnrow .button{width:100%;min-height:46px}
+  .hub-hero .hero-micro{font-size:9px;letter-spacing:.1em;margin-top:22px}
+  .hub-hero .hero-bottomline{position:relative;left:auto;right:auto;bottom:auto;margin:20px 16px 0;justify-content:center;text-align:center;flex-wrap:wrap;font-size:9px;letter-spacing:.1em}
+  .section-header,.showcase-head{align-items:flex-start;flex-direction:column;gap:12px}
+  .featured{grid-template-columns:minmax(0,1fr);padding:20px;gap:18px}
+  .featured .featured-media{min-height:190px;width:100%}
+  .featured .featured-media img{max-width:100%;max-height:230px;object-fit:contain}
+  .process-grid,.showcase-grid{grid-template-columns:minmax(0,1fr);gap:14px}
+  .process-step{min-height:0;padding:20px}
+  .process-step h3{margin:18px 0 8px}
+  .showcase-tile img{height:auto;max-height:260px;min-height:170px;object-fit:contain}
+  .showcase-tile-content{padding:18px}
+  .footer-main{grid-template-columns:minmax(0,1fr);gap:26px}
+  .footer-bottom{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:420px){
+  .hub-hero{min-height:74svh;padding-top:76px}
+  .hub-hero .hero-inner{padding-top:135px}
+  .hub-hero .hero-bottomline{margin-inline:12px}
+  .featured{padding:16px;border-radius:16px}
+  .featured .featured-media{min-height:160px}
+  .process-step{padding:17px}
+  .showcase-tile-content{padding:15px}
+  .footer{padding:34px 0 24px}
+}
