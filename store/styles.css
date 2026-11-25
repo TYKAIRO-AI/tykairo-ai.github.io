@@ -45,3 +45,11 @@ body{padding-top:0}.hero{padding-top:130px;scroll-margin-top:100px}
 @media(max-width:1180px){.site-header{gap:12px}.site-header .desktop-nav{gap:9px}.site-header .desktop-nav a{font-size:9px}.site-header .brand strong{font-size:15px}.site-header .brand img{width:40px;height:40px;flex-basis:40px}.site-header .header-cta{display:none}}
 @media(max-width:940px){.site-header{width:calc(100% - 24px);height:66px;top:8px;padding-inline:12px}.site-header .desktop-nav{position:absolute;top:calc(100% + 8px);left:0;right:0;display:none;padding:12px;border:1px solid rgba(255,75,91,.22);border-radius:14px;background:rgba(17,14,18,.98);box-shadow:0 20px 60px #000b;flex-direction:column;align-items:stretch;gap:2px}.site-header .desktop-nav.open{display:flex}.site-header .desktop-nav a{font-size:13px;padding:12px 14px;border-radius:8px}.site-header .header-actions{margin-left:auto}.site-header .menu-btn{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:40px}}
 @media(max-width:480px){.site-header .brand img{width:36px;height:36px;flex-basis:36px}.site-header .brand strong{font-size:14px}.site-header .brand-sub{font-size:7px}}
+
+/* Smooth navigation between the TYKAIRO studio and digital store pages. */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:tykairo-store-out .16s ease both}
+::view-transition-new(root){animation:tykairo-store-in .2s ease both}
+@keyframes tykairo-store-out{to{opacity:.72}}
+@keyframes tykairo-store-in{from{opacity:.72}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
