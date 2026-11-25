@@ -54,6 +54,41 @@
     const style = document.createElement("style");
     style.id = "tykairo-canonical-nav-style";
     style.textContent = `
+      /* Site-wide mobile overflow protection */
+      html,body{max-width:100%;overflow-x:clip!important}
+      body{min-width:0!important}
+      img,video,svg,canvas,iframe{max-width:100%;height:auto}
+      :where(main,section,article,aside,footer,.container,.wrap,.content,.section-inner,.hero-inner,.hero-copy,.hero-content,.page-hero,.section-header,.card-grid,.workflow-grid,.details-split,.featured,.footer-main){min-width:0;max-width:100%}
+      :where(h1,h2,h3,h4,p,a,button,span,li,small,strong,label){overflow-wrap:anywhere}
+      :where(input,select,textarea,button){max-width:100%;box-sizing:border-box}
+      :where(.card-grid,.workflow-grid,.details-split,.featured,.footer-main,.hero-inner,.stats-grid,.process-grid){min-width:0}
+      @media(max-width:760px){
+        html,body{width:100%;overflow-x:clip!important}
+        body{font-size:15px}
+        main,section,article,footer{max-width:100%;min-width:0}
+        .container,.wrap{width:calc(100% - 32px)!important;max-width:100%!important;margin-inline:auto}
+        h1{font-size:clamp(32px,9vw,48px)!important;line-height:1.18!important;max-width:100%}
+        h2{font-size:clamp(25px,7vw,36px)!important;line-height:1.25!important}
+        h3{font-size:clamp(19px,5vw,25px)!important;line-height:1.3!important}
+        p,li{line-height:1.8}
+        img,video,iframe{max-width:100%!important}
+        pre,code{max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere}
+        table{display:block;max-width:100%;overflow-x:auto}
+        .hero-inner,.details-split,.featured,.footer-main,.workflow-grid,.card-grid,.card-grid.two,.stats-grid{grid-template-columns:minmax(0,1fr)!important}
+        .hero-visual,.featured-media,.card-media{max-width:100%;min-width:0}
+        .btnrow,.hero-actions,.product-actions{flex-wrap:wrap;max-width:100%}
+        .btnrow>* ,.hero-actions>*{max-width:100%;min-width:0}
+        header nav.tykairo-canonical-nav.open{display:flex!important}
+      }
+      @media(max-width:420px){
+        .container,.wrap{width:calc(100% - 24px)!important}
+        h1{font-size:clamp(29px,8.5vw,39px)!important}
+        .section{padding-inline:0!important}
+        .card-grid,.workflow-grid,.process-grid{grid-template-columns:minmax(0,1fr)!important}
+        .hero{padding-inline:12px!important}
+        button,.button,.pill-btn{white-space:normal;min-width:0}
+      }
+
       header.topbar,header.site-header,header.top,header.site-head{
         position:fixed!important;top:14px!important;left:50%!important;right:auto!important;
         transform:translateX(-50%)!important;width:min(1560px,calc(100% - 40px))!important;
