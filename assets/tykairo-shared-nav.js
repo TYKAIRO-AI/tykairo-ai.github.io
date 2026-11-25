@@ -134,7 +134,7 @@
         header .tykairo-brand-copy strong{font-size:15px!important}
         header .tykairo-brand-copy small{font-size:7px!important}
         header nav.tykairo-canonical-nav{display:none!important;position:absolute!important;top:calc(100% + 9px)!important;left:0!important;right:0!important;width:100%!important;max-height:70vh!important;overflow:auto!important;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;gap:0!important;padding:10px!important;border:1px solid #58313d!important;border-radius:14px!important;background:#100d12!important;box-shadow:0 18px 48px #000b!important}
-        header nav.tykairo-canonical-nav.open{display:flex!important}
+        header nav.tykairo-canonical-nav.open,header.topbar.nav-open nav.tykairo-canonical-nav{display:flex!important}
         header nav.tykairo-canonical-nav a{display:flex!important;width:100%!important;padding:13px 14px!important;font-size:13px!important;border-bottom:1px solid #ffffff12!important}
         header nav.tykairo-canonical-nav a[aria-current="page"]{background:#f3294818!important;border-radius:8px!important}
         header nav.tykairo-canonical-nav a[aria-current="page"]:after{left:0!important;right:auto!important;top:8px!important;bottom:8px!important;width:3px!important;height:auto!important}
@@ -155,5 +155,24 @@
     `;
     document.head.appendChild(style);
   }
+
+  // Mobile menu handlers for page variants that do not have their own controller.
+  const menuButton = header.querySelector(".menu-toggle,#thanksMenu");
+  if (menuButton && menuButton.id !== "menuToggle" && !menuButton.dataset.tykairoMenuBound) {
+    menuButton.dataset.tykairoMenuBound = "1";
+    menuButton.addEventListener("click", () => {
+      const opened = nav.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(opened));
+      menuButton.setAttribute("aria-label", opened ? "Close navigation menu" : "Open navigation menu");
+      menuButton.textContent = opened ? "×" : "☰";
+    });
+  }
+  nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    header.classList.remove("nav-open");
+    const button = header.querySelector(".menu-btn,.menu-toggle,#thanksMenu");
+    button?.setAttribute("aria-expanded", "false");
+    if (button && button.id !== "menuBtn") button.textContent = "☰";
+  }));
 
 })();
