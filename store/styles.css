@@ -33,3 +33,15 @@ html{scroll-padding-top:86px} .site-header{gap:clamp(8px,1.5vw,22px)} .desktop-n
 
 /* Keep the store header layout fixed in both Arabic and English. */
 .site-header{direction:ltr}.site-header .brand,.site-header .header-actions,.site-header .desktop-nav{direction:ltr}
+
+/* TYKAIRO shared company header — consistent with all main studio pages */
+.announcement{display:none!important}
+.site-header{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:100;width:min(1420px,calc(100% - 40px));height:74px;padding:0 clamp(14px,2vw,25px);border:1px solid rgba(255,75,91,.25);border-radius:16px;background:rgba(12,11,14,.94);box-shadow:0 14px 45px rgba(0,0,0,.48),inset 0 1px rgba(255,255,255,.035);gap:clamp(14px,1.8vw,26px);direction:ltr}
+.site-header .brand{gap:9px;flex:0 0 auto}.site-header .brand img{width:46px;height:46px;flex:0 0 46px}.site-header .brand strong{font-size:17px}.site-header .brand-sub{font-size:8px}
+.site-header .desktop-nav{flex:1;justify-content:center;gap:clamp(10px,1.25vw,19px);direction:ltr;white-space:nowrap}.site-header .desktop-nav a{font-size:clamp(9px,.78vw,11px);letter-spacing:.025em;white-space:nowrap}.site-header .desktop-nav a[aria-current=page]{color:#fff}
+.site-header .header-actions{flex:0 0 auto;gap:8px;direction:ltr}.site-header .lang-btn{min-height:40px;white-space:nowrap}.site-header .header-cta{white-space:nowrap}
+html[dir=rtl] .site-header .desktop-nav a{direction:rtl}html[dir=ltr] .site-header .desktop-nav a{direction:ltr}
+body{padding-top:0}.hero{padding-top:130px}
+@media(max-width:1180px){.site-header{gap:12px}.site-header .desktop-nav{gap:9px}.site-header .desktop-nav a{font-size:9px}.site-header .brand strong{font-size:15px}.site-header .brand img{width:40px;height:40px;flex-basis:40px}.site-header .header-cta{display:none}}
+@media(max-width:940px){.site-header{width:calc(100% - 24px);height:66px;top:8px;padding-inline:12px}.site-header .desktop-nav{position:absolute;top:calc(100% + 8px);left:0;right:0;display:none;padding:12px;border:1px solid rgba(255,75,91,.22);border-radius:14px;background:rgba(17,14,18,.98);box-shadow:0 20px 60px #000b;flex-direction:column;align-items:stretch;gap:2px}.site-header .desktop-nav.open{display:flex}.site-header .desktop-nav a{font-size:13px;padding:12px 14px;border-radius:8px}.site-header .header-actions{margin-left:auto}.site-header .menu-btn{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:40px}}
+@media(max-width:480px){.site-header .brand img{width:36px;height:36px;flex-basis:36px}.site-header .brand strong{font-size:14px}.site-header .brand-sub{font-size:7px}}
