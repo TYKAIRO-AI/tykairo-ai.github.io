@@ -156,13 +156,4 @@
     document.head.appendChild(style);
   }
 
-  // Existing page-specific menu buttons keep their own handlers; ensure their expanded state controls the shared menu.
-  const menu = header.querySelector(".menu-btn,.menu-toggle,#thanksMenu");
-  if (menu && !menu.dataset.tykairoSharedBound) {
-    menu.dataset.tykairoSharedBound = "1";
-    menu.addEventListener("click", () => {
-      const opened = nav.classList.toggle("open");
-      menu.setAttribute("aria-expanded", String(opened));
-    });
-  }
 })();
