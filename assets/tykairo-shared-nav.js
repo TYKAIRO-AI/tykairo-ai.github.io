@@ -1,5 +1,5 @@
 /* TYKAIRO AI — safe shared navigation enhancer.
-   Keeps each page's existing DOM and event listeners intact. */
+   Preserves each page's own DOM, language controls, and mobile menu behavior. */
 (()=> {
   const labels = {
     "/": ["Home", "الرئيسية"],
@@ -12,36 +12,37 @@
     "/store/": ["Digital Store", "المتجر الرقمي"],
     "/contact/": ["Contact", "تواصل معنا"]
   };
-  const normalize = value => (value || "/").replace(/index\\.html$/, "").replace(/\\/+$/, "") || "/";
-  const currentPath = normalize(location.pathname);
-  const currentLang = () => document.documentElement.lang === "ar" ? "ar" : "en";
-  const header = document.querySelector("header");
-  const nav = header?.querySelector("nav");
-  if (!header || !nav) return;
-
+  const normalize = value => {
+    let path = value || "/";
+    if (path.endsWith("index.html")) path = path.slice(0, -10);
+    if (!path.startsWith("/")) path = "/" + path;
+    if (!path.endsWith("/")) path += "/";
+    return path.replace(/\\/+/g, "/");
+  };
+  const path = normalize(location.pathname);
+  const nav = document.querySelector("header nav");
+  if (!nav) return;
   nav.setAttribute("aria-label", nav.getAttribute("aria-label") || "Main navigation");
   nav.querySelectorAll("a[href]").forEach(anchor => {
     const url = new URL(anchor.getAttribute("href"), location.origin);
-    const path = normalize(url.pathname);
-    const item = labels[path];
-    if (item && !anchor.hasAttribute("data-en")) {
+    const href = normalize(url.pathname);
+    const item = labels[href];
+    if (item) {
       anchor.dataset.en = item[0];
       anchor.dataset.ar = item[1];
-      anchor.textContent = item[currentLang() === "ar" ? 1 : 0];
+      anchor.textContent = item[document.documentElement.lang === "ar" ? 1 : 0];
     }
-    const isActive = path !== "/" ? currentPath === path || currentPath.startsWith(path) : currentPath === "/";
-    if (isActive) anchor.setAttribute("aria-current", "page");
+    const active = href === "/" ? path === "/" : path.startsWith(href);
+    if (active) anchor.setAttribute("aria-current", "page");
     else if (anchor.getAttribute("aria-current") === "page") anchor.removeAttribute("aria-current");
   });
-
-  // Do not replace nav children, rebuild the brand, inject global CSS, or
-  // rewrite CTA controls: page-specific language/menu handlers stay connected.
-  const languageObserver = new MutationObserver(() => {
-    const lang = currentLang();
+  // No innerHTML replacement, brand rebuild, global CSS injection, or CTA mutation.
+  const observer = new MutationObserver(() => {
+    const lang = document.documentElement.lang === "ar" ? "ar" : "en";
     nav.querySelectorAll("a[data-en][data-ar]").forEach(anchor => {
-      const expected = anchor.dataset[lang];
-      if (expected && anchor.textContent.trim() !== expected) anchor.textContent = expected;
+      const label = anchor.dataset[lang];
+      if (label && anchor.textContent.trim() !== label) anchor.textContent = label;
     });
   });
-  languageObserver.observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+  observer.observe(document.documentElement, {attributes:true, attributeFilter:["lang"]});
 })();
