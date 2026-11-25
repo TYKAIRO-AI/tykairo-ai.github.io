@@ -11,7 +11,7 @@
     ["/store/", "Digital Store"],
     ["/contact/", "Contact"]
   ];
-  const path = location.pathname.replace(/index\\.html$/, "").replace(/\\/+/g, "/");
+  const path = location.pathname.replace(/index\.html$/, "").replace(/\/+/g, "/");
   const active = path === "/" ? "/" : (items.find(([href]) => href !== "/" && path.startsWith(href))?.[0] || null);
 
   const header = document.querySelector("header");
