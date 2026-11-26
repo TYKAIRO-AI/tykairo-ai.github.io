@@ -65,3 +65,75 @@ body{padding-top:0}.hero{padding-top:130px;scroll-margin-top:100px}
   .site-header{direction:ltr!important}
   .site-header .desktop-nav{flex-direction:column!important;align-items:stretch}
 }
+
+/* Focused single-product storefront: ADPILOT */
+.store-hero{min-height:590px;padding-top:145px;padding-bottom:82px}
+.store-hero:before{background-image:url('../assets/adpilot-cover.svg?v=20261126');background-position:center;background-size:cover;opacity:.44}
+.store-hero:after{background:linear-gradient(90deg,#050507e8 0%,#050507c9 54%,#050507e8 100%),linear-gradient(0deg,#060608 0%,#06060844 45%,#06060899 100%)}
+.store-hero .hero-content{max-width:790px}
+.store-hero h1{max-width:760px}
+.store-hero .hero-content>p{max-width:620px}
+.store-metrics{grid-template-columns:repeat(3,minmax(0,1fr));max-width:var(--max)}
+.store-metrics div{min-width:0;gap:12px;padding:4px 12px}
+.store-metrics strong{font-size:clamp(15px,2vw,20px);overflow-wrap:anywhere}
+.store-metrics span{font-size:11px}
+.products.section{padding-top:82px}
+.products .section-heading{align-items:flex-end}
+.products .section-heading>p{max-width:460px}
+.adpilot-store-card{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:stretch;min-height:360px}
+.adpilot-store-card .product-art{min-width:0;min-height:0;aspect-ratio:auto;display:block}
+.adpilot-store-card .product-art .adpilot-cover-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.adpilot-store-card .product-art .art-chip{z-index:2}
+.adpilot-store-card .product-info{min-width:0;gap:8px;padding:clamp(22px,3vw,42px)}
+.adpilot-store-card .product-info h3{font-size:clamp(25px,3vw,34px);margin:14px 0 4px}
+.adpilot-store-card .product-info>p{max-width:56ch;line-height:2.05}
+.adpilot-store-card .product-bottom{align-items:center;flex-wrap:wrap}
+.adpilot-store-card .product-actions{display:flex;flex-wrap:wrap;gap:10px}
+.adpilot-store-card .product-link{white-space:normal}
+.adpilot-store-card .product-footnote{line-height:1.8}
+.products .section-heading h2{max-width:100%}
+.why{align-items:center}
+.benefit{min-width:0}
+.benefit>div{min-width:0}
+.contact-band{padding:clamp(22px,4vw,42px)}
+@media(max-width:900px){
+ .adpilot-store-card{grid-template-columns:minmax(0,1fr);max-width:760px;margin-inline:auto}
+ .adpilot-store-card .product-art{aspect-ratio:16/9;min-height:0;grid-row:1}
+ .adpilot-store-card .product-info{grid-row:2}
+}
+@media(max-width:760px){
+ .store-hero{min-height:0;padding:112px 18px 55px}
+ .store-hero .hero-content{width:100%;margin:0;text-align:right}
+ .store-hero h1{font-size:clamp(34px,9vw,52px);line-height:1.28}
+ .store-hero .hero-content>p{font-size:14px;line-height:2}
+ .store-hero .hero-actions{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+ .store-hero .hero-actions>*{width:100%;justify-content:center}
+ .store-hero .hero-proof{margin-top:24px}
+ .store-metrics{grid-template-columns:repeat(3,minmax(0,1fr));gap:0;padding:18px 8px}
+ .store-metrics div{flex-direction:column;align-items:center;justify-content:center;text-align:center;border-inline-start:1px solid var(--line);gap:4px}
+ .store-metrics strong{font-size:15px}
+ .store-metrics span{font-size:9px;line-height:1.5}
+ .products.section{padding:54px 16px}
+ .products .section-heading{display:block;margin-bottom:22px}
+ .products .section-heading>p{margin-top:10px}
+ .adpilot-store-card{border-radius:16px}
+ .adpilot-store-card .product-art{width:100%;aspect-ratio:16/9}
+ .adpilot-store-card .product-info{padding:20px;gap:8px}
+ .adpilot-store-card .product-meta{align-items:flex-start;flex-wrap:wrap;gap:9px}
+ .adpilot-store-card .product-info h3{font-size:26px;margin:12px 0 2px}
+ .adpilot-store-card .product-info>p{font-size:13px;line-height:1.95}
+ .adpilot-store-card .product-bottom{align-items:stretch;flex-direction:column;gap:12px}
+ .adpilot-store-card .product-actions{display:grid;grid-template-columns:minmax(0,1fr);width:100%}
+ .adpilot-store-card .product-link{display:flex;width:100%;min-height:44px;align-items:center;justify-content:center}
+ .adpilot-store-card .price{font-size:12px}
+ .why{padding-top:50px;padding-bottom:50px}
+ .contact-band{display:block;margin:0 14px 48px;padding:22px 18px}
+ .contact-band h2{font-size:22px;line-height:1.4}
+ .contact-btn{display:flex;width:fit-content;max-width:100%;margin-top:18px}
+}
+@media(max-width:380px){
+ .store-metrics{grid-template-columns:1fr;gap:10px}
+ .store-metrics div{border:0!important;flex-direction:row;justify-content:center}
+ .store-metrics strong{min-width:70px;text-align:center}
+ .adpilot-store-card .product-info{padding:16px}
+}
