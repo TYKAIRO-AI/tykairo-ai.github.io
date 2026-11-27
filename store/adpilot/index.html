@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n<style>html:not(.lang-ready) body{visibility:hidden}</style>\n<script>(()=>{let l="ar";try{l=localStorage.getItem("tykairo-site-lang")==="en"?"en":"ar"}catch{}document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr"})();</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n<style>html:not(.lang-ready) body{visibility:hidden}</style>\n<script>(()=>{let l="en";try{localStorage.setItem("tykairo-site-lang","en")}catch{}document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr"})();</script>
 <meta name="theme-color" content="#09090c">
 <meta name="description" content="ADPILOT من TYKAIRO AI — مساعد تسويق بالذكاء الاصطناعي لتخطيط الحملات، إنشاء مسودات المحتوى، وتنظيم العملاء المحتملين.">
 <meta property="og:type" content="product"><meta property="og:title" content="ADPILOT — AI Marketing Copilot | TYKAIRO AI"><meta property="og:description" content="Plan campaigns, create marketing drafts and organize leads with an AI-powered marketing workspace.">
@@ -22,17 +22,6 @@
 @keyframes adpilot-page-out{to{opacity:.72}}@keyframes adpilot-page-in{from{opacity:.72}to{opacity:1}}
 @media(prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
 
-
-/* Stable product-page navigation and safe bilingual heading rendering */
-.section-head h2 span{color:var(--red2)}
-.top{position:fixed!important;inset:0 0 auto 0!important;left:0!important;right:0!important;top:0!important;transform:none!important;width:100%!important;max-width:none!important;height:76px!important;min-height:76px!important;border-radius:0!important;z-index:1000!important}
-.nav{height:76px!important;min-height:76px!important}
-body{padding-top:76px!important}
-@media(max-width:940px){
- .top{height:66px!important;min-height:66px!important}
- .nav{height:66px!important;min-height:66px!important}
- body{padding-top:66px!important}
-}
 
 /* Consolidated product-page header */
 .top{position:fixed!important;inset:0 0 auto!important;transform:none!important;width:100%!important;height:76px!important;min-height:76px!important;max-width:none!important;border:0!important;border-bottom:1px solid #ffffff18!important;border-radius:0!important;z-index:1000!important}
@@ -67,6 +56,6 @@ body{padding-top:76px!important}
 <section class="section"><div class="wrap split"><div><div class="kicker">06 / SUPPORT</div><h2 style="font:700 34px 'Space Grotesk'" data-ar="محتاج تعرف أكتر؟" data-en="Need more information?">محتاج تعرف أكتر؟</h2><p style="color:var(--muted)" data-ar="فريق TYKAIRO AI يقدر يجاوب على أسئلتك بخصوص النسخة التجريبية ومتطلبات المنتج." data-en="The TYKAIRO AI team can answer questions about pilot access and product requirements.">فريق TYKAIRO AI يقدر يجاوب على أسئلتك بخصوص النسخة التجريبية ومتطلبات المنتج.</p></div><div class="actions"><a class="btn primary" href="mailto:hello@tykairo.ai?subject=ADPILOT%20Support" data-ar="تواصل مع الدعم ↗" data-en="Contact support ↗">تواصل مع الدعم ↗</a><a class="btn" href="/store/" data-ar="العودة للمتجر" data-en="Back to store">العودة للمتجر</a></div></div></section>
 </main><footer class="foot"><div class="wrap footrow"><span>© 2026 TYKAIRO AI · ADPILOT · <span class="ltr">ADPILOT-WIN-001</span></span><span><a href="/privacy/">سياسة الخصوصية</a> · <a href="/contact/">الدعم والتواصل</a></span></div></footer>
 <script>
-(()=>{let lang='ar';try{lang=localStorage.getItem('tykairo-site-lang')==='en'?'en':'ar'}catch{}const b=document.getElementById('lang'),menu=document.getElementById('adpilotNavigation'),toggle=document.getElementById('adpilotMenuToggle');function set(next){lang=next;document.documentElement.lang=next;document.documentElement.dir=next==='ar'?'rtl':'ltr';document.body.dir=next==='ar'?'rtl':'ltr';document.querySelectorAll('[data-ar][data-en]').forEach(el=>{if(el.dataset[next]!==undefined)el.innerHTML=el.dataset[next]});b.textContent=next==='ar'?'EN':'AR';b.setAttribute('aria-label',next==='ar'?'Switch language to English':'غيّر اللغة إلى العربية');try{localStorage.setItem('tykairo-site-lang',next)}catch{}document.documentElement.classList.add('lang-ready')}function close(){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}set(lang);b.addEventListener('click',()=>set(lang==='ar'?'en':'ar'));toggle.addEventListener('click',()=>{const open=!menu.classList.contains('open');menu.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'×':'☰'});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});document.addEventListener('click',e=>{if(!menu.contains(e.target)&&!toggle.contains(e.target))close()})})();
+(()=>{let lang='en';try{localStorage.setItem('tykairo-site-lang','en')}catch{}const b=document.getElementById('lang'),menu=document.getElementById('adpilotNavigation'),toggle=document.getElementById('adpilotMenuToggle');function set(next){lang=next;document.documentElement.lang=next;document.documentElement.dir=next==='ar'?'rtl':'ltr';document.body.dir=next==='ar'?'rtl':'ltr';document.querySelectorAll('[data-ar][data-en]').forEach(el=>{if(el.dataset[next]!==undefined)el.innerHTML=el.dataset[next]});b.textContent=next==='ar'?'EN':'AR';b.setAttribute('aria-label',next==='ar'?'Switch language to English':'غيّر اللغة إلى العربية');try{localStorage.setItem('tykairo-site-lang',next)}catch{}document.documentElement.classList.add('lang-ready')}function close(){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}set(lang);b.addEventListener('click',()=>set(lang==='ar'?'en':'ar'));toggle.addEventListener('click',()=>{const open=!menu.classList.contains('open');menu.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'×':'☰'});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});document.addEventListener('click',e=>{if(!menu.contains(e.target)&&!toggle.contains(e.target))close()})})();
 </script>
 </body></html>
